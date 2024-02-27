@@ -3,7 +3,7 @@
 This repo is for code related to the project Document Classification under the Woo (Open Government Act). The goal of this research is to find an effective method to classify documents that the Municipality of Amsterdam publishes. The focus will be on Dutch Large Language Models.
 
 ## Overleaf Link
-https://www.overleaf.com/2549441224szvvffnxqsdk#eda3e6
+[Thesis Design](https://www.overleaf.com/2549441224szvvffnxqsdk#eda3e6)
 
 ## Background
 
