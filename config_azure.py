@@ -1,1 +1,12 @@
 """Paths when running on Azure (AML)"""
+# Folder path containing PDF files
+folder_path = '/home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/raadsinformatie/search_results/voordrachten/'
+
+# Folder containing folder with PDF files, these are the files annotated by Anna
+folder_path_annotated = "/home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/raadsinformatie/annotated/"
+
+# CSV file containing the extracted texts from the files in folder_path_annotated
+file_path_annotated_csv = '/home/azureuser/cloudfiles/code/Users/f.bakker/document-classification-using-large-language-models/notebooks/annotated.csv'
+
+# Raadsinformatie folder, containing folder with all data
+folder_path_raadsinformatie = '/home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/raadsinformatie/'
