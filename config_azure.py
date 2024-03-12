@@ -1,4 +1,7 @@
 """Paths when running on Azure (AML)"""
+# Folder path from BlobFuse
+blobfuse_path = '/home/azureuser/cloudfiles/code/blobfuse/'
+
 # Folder path containing PDF files
 folder_path = '/home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/raadsinformatie/search_results/voordrachten/'
 
