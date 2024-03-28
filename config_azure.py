@@ -2,6 +2,13 @@
 # Folder path from BlobFuse
 blobfuse_path = '/home/azureuser/cloudfiles/code/blobfuse/'
 
+# Output path to store stuff on Blobfuse
+output_path = '/home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification'
+
+
+
+
+####### REMOVE LATER ######
 # Folder path containing PDF files
 folder_path = '/home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/raadsinformatie/search_results/voordrachten/'
 
