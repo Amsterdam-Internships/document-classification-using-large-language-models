@@ -1,5 +1,8 @@
 # Adapt to your needs. This version includes typical data files we work with, along with the default python template.
 
+# big files
+big_data/.
+
 # Text / html
 *.csv
 *.txt
