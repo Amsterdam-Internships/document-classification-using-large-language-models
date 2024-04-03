@@ -1,6 +1,5 @@
 from collections import Counter
 import re
-import time
 import datetime
 import pytz
 import os
@@ -35,6 +34,8 @@ def get_prediction_from_response(response):
     else:
         return 'NoPrediction'
 
+
+
 """ Extract the promptfunction name """
 def get_promptfunction_name(prompt_function):
     string = f"{prompt_function}"
@@ -45,6 +46,8 @@ def get_promptfunction_name(prompt_function):
     else:
         return f"{prompt_function}"
     
+
+
 """ Get the current time in the Netherlands """
 def get_datetime():
     current_datetime_utc = datetime.datetime.now(pytz.utc)
@@ -54,6 +57,8 @@ def get_datetime():
     current_datetime_dutch = current_datetime_utc.astimezone(dutch_timezone)
     return current_datetime_dutch
         
+
+
 """ Get the new runid """
 def get_runid(path):
 
@@ -66,6 +71,8 @@ def get_runid(path):
     else:
         return 0, pd.DataFrame()
     
+
+
 """ Save evaluation metrics of a run """
 def update_overview_results(df, model_name, subset=None):
     # df= dataframe with predictions for each do, one row per doc/prediction
