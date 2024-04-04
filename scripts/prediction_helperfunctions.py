@@ -59,18 +59,50 @@ def get_datetime():
         
 
 
+# """ Get the new runid """
+# def get_runid(path):
+
+#     # if not first run, set runid to most recent run+1
+#     if os.path.exists(path):
+#         df = pd.read_pickle(path)
+#         return max(df['run_id'])+1, df
+
+#     # if first run, set runid to 0
+#     else:
+#         return 0, pd.DataFrame()
+
 """ Get the new runid """
-def get_runid(path):
+def get_runid(set_run_id):
+    path = f"{cf.output_path}/overview_results.pkl"
 
     # if not first run, set runid to most recent run+1
     if os.path.exists(path):
         df = pd.read_pickle(path)
-        return max(df['run_id'])+1, df
+
+        if set_run_id == 'new':
+            return max(df['run_id'])+1
+
+        # if want resume run, return current run_id
+        else:
+            return max(df['run_id'])
 
     # if first run, set runid to 0
     else:
-        return 0, pd.DataFrame()
+        return 0
     
+""" Combine the current predictions with previous runs """
+def combine_current_with_previous_predictions(path_to_old_predictions, new_predictions):
+
+    # if predictions are already made, load and combine
+    if os.path.exists(path_to_old_predictions):
+        predictions_df = pd.read_pickle(path_to_old_predictions)
+        all_predictions = pd.concat([predictions_df, new_predictions])
+
+    # no previous predictions, return the new predictions
+    else:
+        all_predictions = new_predictions
+    
+    return all_predictions
 
 
 """ Save evaluation metrics of a run """
@@ -131,3 +163,14 @@ def update_overview_results(df, model_name, subset=None):
     # save to overview_results.pkl
     results.to_pickle(path)
    
+
+""" Raise error if input is incorrect """
+def check_input_set_run_id(set_run_id):
+    if set_run_id not in ['new', 'previous']:
+            raise ValueError("set_run_id must be either 'new' or 'previous'")
+
+def check_input_subset(subset):
+    if subset not in [None, 'train', 'val', 'test', 'complete']:
+            raise ValueError("set_run_id must be one of these options [None, 'train', 'val', 'test', 'complete']")
+    
+
