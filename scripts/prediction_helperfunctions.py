@@ -74,21 +74,28 @@ def get_datetime():
 """ Get the new runid """
 def get_runid(set_run_id):
     path = f"{cf.output_path}/overview_results.pkl"
+    
+    # if not run_id given as in, then select new, or previous run_id
+    if not isinstance(set_run_id, int):
 
-    # if not first run, set runid to most recent run+1
-    if os.path.exists(path):
-        df = pd.read_pickle(path)
+        # if not first run, set runid to most recent run+1
+        if os.path.exists(path):
+            df = pd.read_pickle(path)
 
-        if set_run_id == 'new':
-            return max(df['run_id'])+1
+            if set_run_id == 'new':
+                return max(df['run_id'])+1
 
-        # if want resume run, return current run_id
+            # if want resume run, return current run_id
+            else:
+                return max(df['run_id'])
+
+        # if first run, set runid to 0
         else:
-            return max(df['run_id'])
-
-    # if first run, set runid to 0
+            return 0
+        
+    # if run_id is given. i.e. its a integer
     else:
-        return 0
+        return set_run_id
     
 """ Combine the current predictions with previous runs """
 def combine_current_with_previous_predictions(path_to_old_predictions, new_predictions):
@@ -106,7 +113,7 @@ def combine_current_with_previous_predictions(path_to_old_predictions, new_predi
 
 
 """ Save evaluation metrics of a run """
-def update_overview_results(df, model_name, subset=None):
+def update_overview_results(df, model_name,save_predictions_path, subset=None):
     # df= dataframe with predictions for each do, one row per doc/prediction
     # model_name = string with the name of the model
     # subset = can be train, val, or test, or left open
@@ -115,12 +122,15 @@ def update_overview_results(df, model_name, subset=None):
     evaluation_dict = classification_report(df['label'], df['prediction'], output_dict=True)
     evaluation = pd.DataFrame(evaluation_dict).transpose()
     
+    current_rundid = df.iloc[0]['run_id']
+
     new_row = {
         # stuff about the run
-        'run_id':df.iloc[0]['run_id'],
+        'run_id':current_rundid,
         'model':model_name,
         'prompt_function':df.iloc[0]['prompt_function'],
         'text_column':df.iloc[0]['text_column'],
+        'saved_in_path':save_predictions_path,
         'date': get_datetime(),
         'runtime':sum(df['runtime']),
         'set':subset,
@@ -157,8 +167,13 @@ def update_overview_results(df, model_name, subset=None):
     if os.path.exists(path):
         earlier_results = pd.read_pickle(path)
 
+        # remove records, if run_id is resumed.
+        earlier_results = earlier_results.loc[earlier_results['run_id']!= current_rundid]
+
         # combine evaluation of previous runs with current run
         results = pd.concat([earlier_results, results])
+
+    display(results)
 
     # save to overview_results.pkl
     results.to_pickle(path)
@@ -166,8 +181,8 @@ def update_overview_results(df, model_name, subset=None):
 
 """ Raise error if input is incorrect """
 def check_input_set_run_id(set_run_id):
-    if set_run_id not in ['new', 'previous']:
-            raise ValueError("set_run_id must be either 'new' or 'previous'")
+    if set_run_id not in ['new', 'previous'] and not isinstance(set_run_id, int):
+        raise ValueError("set_run_id must be either 'new' or 'previous' or an integer.")
 
 def check_input_subset(subset):
     if subset not in [None, 'train', 'val', 'test', 'complete']:
