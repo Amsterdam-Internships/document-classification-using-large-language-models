@@ -173,7 +173,7 @@ def update_overview_results(df, model_name,save_predictions_path, subset=None):
         # combine evaluation of previous runs with current run
         results = pd.concat([earlier_results, results])
 
-    display(results)
+    display(results.iloc[-1])
 
     # save to overview_results.pkl
     results.to_pickle(path)
