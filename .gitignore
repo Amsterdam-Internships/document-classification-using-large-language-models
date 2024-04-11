@@ -5,7 +5,7 @@ big_data/.
 
 # Text / html
 *.csv
-*.txt
+# *.txt
 *.html
 
 # Geo data
