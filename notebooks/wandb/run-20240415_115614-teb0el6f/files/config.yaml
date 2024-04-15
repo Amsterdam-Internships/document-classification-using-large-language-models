@@ -9,13 +9,15 @@ _wandb:
     huggingface_version: 4.39.3
     is_jupyter_run: true
     is_kaggle_kernel: false
-    start_time: 1713170632.0
+    start_time: 1713182175.0
     t:
       1:
       - 1
+      - 5
       - 11
       - 49
       - 51
+      - 53
       - 55
       - 71
       - 84
@@ -349,7 +351,7 @@ log_on_each_node:
   value: true
 logging_dir:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/geitje_finetuning_output/runs/Apr15_11-45-09_femke-gpu-16cores-110ram
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/geitje_finetuning_output/runs/Apr15_11-56-10_femke-gpu-16cores-110ram
 logging_strategy:
   desc: null
   value: steps
