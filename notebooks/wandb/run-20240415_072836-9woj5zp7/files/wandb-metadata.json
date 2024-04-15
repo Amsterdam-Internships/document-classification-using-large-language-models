@@ -1,0 +1,23 @@
+{
+    "os": "Linux-5.15.0-1040-azure-x86_64-with-glibc2.31",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-04-15T07:28:38.607170",
+    "startedAt": "2024-04-15T07:28:36.122573",
+    "docker": null,
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "git@github.com:Amsterdam-Internships/document-classification-using-large-language-models.git",
+        "commit": "58afe6954beb83524602c3177420e377a75dff09"
+    },
+    "email": "femke.bakker02@gmail.com",
+    "root": "/mnt/batch/tasks/shared/LS_root/mounts/clusters/femke-gpu-16cores-110ram/code/Users/f.bakker/document-classification-using-large-language-models",
+    "host": "femke-gpu-16cores-110ram",
+    "username": "azureuser",
+    "executable": "/anaconda/envs/AmsterdamInContextLearning/bin/python"
+}
