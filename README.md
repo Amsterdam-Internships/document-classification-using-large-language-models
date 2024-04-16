@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 
 
-The code has been tested with Python x.x on Linux/MacOS/Windows. 
+The code has been tested with Python 3.9 on Windows. 
 
 ## Usage
 
