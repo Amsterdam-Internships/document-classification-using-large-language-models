@@ -188,4 +188,10 @@ def check_input_subset(subset):
     if subset not in [None, 'train', 'val', 'test', 'complete']:
             raise ValueError("set_run_id must be one of these options [None, 'train', 'val', 'test', 'complete']")
     
+def check_data_split_input(subset_train, subset_test):
+    if subset_train not in ['train', 'dev']:
+        raise ValueError("subset_train must be either 'train' or 'dev'")
+    if subset_test not in ['test', 'val']:
+        raise ValueError("subset_test must be either 'test' or 'val'")
+    
 
