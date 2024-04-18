@@ -177,6 +177,17 @@ def update_overview_results(df, model_name,save_predictions_path, subset=None):
 
     # save to overview_results.pkl
     results.to_pickle(path)
+
+
+""" Combine new dataframe with dataframe already saved, if file already exists. """
+def combine_and_save_df(model_df, save_to_path):
+    
+    # combine with earlier runs if exists
+    if os.path.exists(save_to_path):
+        original = pd.read_pickle(save_to_path)
+        model_df = pd.concat([original, model_df])
+
+    model_df.to_pickle(save_to_path)
    
 
 """ Raise error if input is incorrect """

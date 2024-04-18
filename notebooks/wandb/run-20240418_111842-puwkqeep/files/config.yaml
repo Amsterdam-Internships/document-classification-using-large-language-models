@@ -9,7 +9,7 @@ _wandb:
     huggingface_version: 4.39.3
     is_jupyter_run: true
     is_kaggle_kernel: false
-    start_time: 1713434154.0
+    start_time: 1713439123.0
     t:
       1:
       - 1
@@ -288,7 +288,7 @@ problem_type:
   value: null
 _name_or_path:
   desc: null
-  value: FemkeBakker/TryOutFinetuningGeitje
+  value: Rijgersberg/GEITje-7B
 transformers_version:
   desc: null
   value: 4.39.3
@@ -357,7 +357,7 @@ max_grad_norm:
   value: 1.0
 num_train_epochs:
   desc: null
-  value: 2
+  value: 1
 max_steps:
   desc: null
   value: -1
@@ -384,7 +384,7 @@ log_on_each_node:
   value: true
 logging_dir:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/geitje_finetuning_output/runs/Apr18_11-05-08_femke-gpu-24cores-220ram
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/geitje_finetuning_output/logs
 logging_strategy:
   desc: null
   value: steps
