@@ -50,7 +50,9 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
     predictions['date'] = date
 
     # remove unneccary columns
-    predictions = predictions.drop(columns=['set', 'text', 'tokens', 'token_count', 'clean_tokens', 'clean_tokens_count', 'pdf_path', 'clean_text', 'token_count_geitje', 'token_count_mistral', 'token_count_llama2_7b_hf', '4split', '2split'])
+    columns =['set', 'text', 'tokens', 'token_count', 'clean_tokens', 'clean_tokens_count', 'pdf_path', 'clean_text', 'token_count_geitje', 'token_count_mistral', 'token_count_llama2_7b_hf', '4split', '2split']
+    remove_col = [col for col in columns if col in dataframe.columns]
+    predictions = predictions.drop(columns=remove_col)
 
     # save predictions
     ph.combine_and_save_df(predictions, prediction_path)
