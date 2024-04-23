@@ -18,6 +18,7 @@ def load_data_split(df, split_col,subset, label_col):
     y = subdf[label_col]
     return X, y
 
+    bf.run_baseline(BASELINE_FUNCTION,MODEL_NAME, trunc, SPLIT_COLUMN, TRAIN_SET, TEST_SET, TRUNC_COLUMN, LABEL_COLUMN, PREDICTION_PATH, OVERVIEW_PATH)
 """Function saves predictions and results of a baseline in two seperate files."""
 def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train, subset_test, text_col, label_col, prediction_path, overview_path):
     start_time = time.time()
