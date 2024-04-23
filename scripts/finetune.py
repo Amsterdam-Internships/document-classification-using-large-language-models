@@ -3,6 +3,9 @@ from datasets import DatasetDict, load_dataset, concatenate_datasets
 from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments
 from trl import SFTTrainer
 
+"""
+This is code from the GitHub of GEITje.
+"""
 
 def train(model, tokenizer, chat_dataset, new_model_name):
 
