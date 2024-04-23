@@ -68,7 +68,7 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
             'train_set_support':len(X_train),
             'test_set_support':len(X_test),
             'split_col':split_col,
-            'text_col':text_col,
+            'text_col':X_train.iloc[0]['trunc_col'],
             'runtime':time.time()-start_time,
             'accuracy': accuracy_score(y_test, y_pred),
             'macro_avg_precision': precision_score(y_test, y_pred, average='macro'),
