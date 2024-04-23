@@ -41,9 +41,9 @@ def add_truncation_column(df,text_col, token_col_name, front_token_threshold, ba
 
         input.append(input_txt)
 
-    df[f"Truncation{token_col_name}Front{front_token_threshold}Back{back_token_threshold}"] = input
-    trunc_col = f"Truncation{token_col_name}Front{front_token_threshold}Back{back_token_threshold}"
-    return df, trunc_col
+    df['trunc_txt'] = input
+    df['trunc_col'] = f"Truncation{token_col_name}Front{front_token_threshold}Back{back_token_threshold}"
+    return df
 
 
 
