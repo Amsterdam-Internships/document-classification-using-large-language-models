@@ -78,6 +78,9 @@ def get_rows_to_predict(df, prediction_path, run_id):
         if len(previous_predictions) != 0:
             print("Run-id already known, resuming predictions...")
 
+        elif len(to_predict) == 0:
+            print("ALL PREDICTIONS HAVE BEEN MADE")
+
     else:
         to_predict = df.copy()
         previous_predictions = 'None'
