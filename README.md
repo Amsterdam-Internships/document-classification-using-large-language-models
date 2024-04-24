@@ -54,6 +54,16 @@ The code has been tested with Python 3.9 on Windows.
 
 ## How it works
 
+Run the following order of the notebooks:
+- load_txt 
+- clean_data 
+- baseline 
+- text truncation 
+- dataFormattingFinetuning 
+- CLgeitje
+- FTgeitje. still very messy, work in progress. Ill clean up after fixing the bug, will probably make more of mess anyway. 
+
+
 Can be divided in subsections:
 
 ### input
