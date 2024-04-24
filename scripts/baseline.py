@@ -59,7 +59,28 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
     ph.combine_and_save_df(predictions, prediction_path)
 
     # save run -> scores + runtime
-    overview = pd.DataFrame(
+    try:
+        overview = pd.DataFrame(
+            [{
+                'model':model_name,
+                'date': date,
+                'train_set': subset_train,
+                'test_set': subset_test,
+                'train_set_support':len(X_train),
+                'test_set_support':len(X_test),
+                'split_col':split_col,
+                'text_col':X_train.iloc[0]['trunc_col'],
+                'runtime':time.time()-start_time,
+                'accuracy': accuracy_score(y_test, y_pred),
+                'macro_avg_precision': precision_score(y_test, y_pred, average='macro'),
+                'macro_avg_recall': recall_score(y_test, y_pred, average='macro'),
+                'macro_avg_f1': f1_score(y_test, y_pred, average='macro'),
+                'classification_report':report
+            }   ]
+        )
+
+    except:
+        overview = pd.DataFrame(
         [{
             'model':model_name,
             'date': date,
@@ -68,7 +89,7 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
             'train_set_support':len(X_train),
             'test_set_support':len(X_test),
             'split_col':split_col,
-            'text_col':X_train.iloc[0]['trunc_col'],
+            'text_col': text_col,
             'runtime':time.time()-start_time,
             'accuracy': accuracy_score(y_test, y_pred),
             'macro_avg_precision': precision_score(y_test, y_pred, average='macro'),
