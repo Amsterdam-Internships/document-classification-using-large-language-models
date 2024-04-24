@@ -55,13 +55,17 @@ The code has been tested with Python 3.9 on Windows.
 ## How it works
 
 Run the following order of the notebooks:
-- load_txt 
-- clean_data 
-- baseline 
-- text truncation 
-- dataFormattingFinetuning 
-- CLgeitje
+- load_txt -> loads the data from the ocr files and splits the data into subsets (train, test, dev, val)
+- clean_data -> check shortest docs and remove messy data.
+- baseline  -> run baselines on complete docs.
+- text truncation -> truncate text using tokenizer of either Llama or Mistral (Geitje has the same as mistral) and try out thresholds on baselines.
+- dataFormattingFinetuning  -> format data into DatasetDict, and push to huggingface
+- CLgeitje -> notebook to run GEITje In-Context learning
 - FTgeitje. still very messy, work in progress. Ill clean up after fixing the bug, will probably make more of mess anyway. 
+
+Stand alone notebooks:
+-EDA/EDA_clean_for_submission
+- data_insight -> still messy. use it now to get some quick results for either overleaf or to check something in the data.
 
 
 Can be divided in subsections:
