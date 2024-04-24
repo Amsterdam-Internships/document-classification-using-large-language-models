@@ -5,7 +5,7 @@ def get_class_list():
     return ['Voordracht', 'Besluit', 'Schriftelijke Vragen', 'Brief', 'Raadsadres', 'Onderzoeksrapport', 'Termijnagenda', 'Raadsnotulen', 'Agenda', 'Motie', 'Actualiteit', 'Factsheets']
 
 # ---- GEITje----------
-
+# simple_prompt takes extra input, since those parameters are needed for fewshot prompt. Allows to run same code for experiment. 
 def simple_prompt(doc,train_df, num_examples, text_column):
     prompt = f"""
     Classificeer het document in één van de categoriën.

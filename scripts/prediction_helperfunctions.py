@@ -68,7 +68,10 @@ def combine_and_save_df(model_df, save_to_path):
 
     model_df.to_pickle(save_to_path)
 
-
+"""
+Given a dataframe with all docs that need to have prediction in the prediction_path file with the same run_id, 
+return which rows of df have already been predicted and which have not. 
+"""
 def get_rows_to_predict(df, prediction_path, run_id):
     if os.path.exists(prediction_path):
         previous_predictions = pd.read_pickle(prediction_path)
@@ -87,6 +90,7 @@ def get_rows_to_predict(df, prediction_path, run_id):
 
     return to_predict, previous_predictions
 
+""" Remove previous records of run_id and update with new scores. """
 def replace_and_save_df(overview, overview_path, run_id):
     if os.path.exists(overview_path):
         previous_runs = pd.read_pickle(overview_path)

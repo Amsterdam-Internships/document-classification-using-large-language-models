@@ -26,22 +26,23 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
     X_train, y_train = load_data_split(dataframe,split_col,subset_train,label_col) 
     X_test, y_test = load_data_split(dataframe,split_col,subset_test,label_col) 
 
-
+    # use TF-IDF vectorizer
     vectorizer = TfidfVectorizer()
     X_train_tfidf_bin = vectorizer.fit_transform(X_train[text_col])
     X_test_tfidf_bin = vectorizer.transform(X_test[text_col])
 
+    # train classifier on training data
     model = baseline_function
-
-    # Train the classifier on the training data
     model.fit(X_train_tfidf_bin, y_train)
 
+    # get predictions
     y_pred = model.predict(X_test_tfidf_bin)
 
-    # Calculate the accuracy of the classifier
+    # get classification report
     report = classification_report(y_test, y_pred)
     print(report)
 
+    # save data about predictions
     date = ph.get_datetime()
     predictions = X_test.copy()
     predictions[label_col] = y_test
