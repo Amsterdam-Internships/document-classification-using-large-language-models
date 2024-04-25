@@ -6,7 +6,7 @@ def get_class_list():
 
 # ---- GEITje----------
 # simple_prompt takes extra input, since those parameters are needed for fewshot prompt. Allows to run same code for experiment. 
-def simple_prompt(doc,train_df, num_examples, text_column):
+def simple_prompt(doc):
     prompt = f"""
     Classificeer het document in één van de categoriën.
     Houd het kort, geef enkel de naam van de categorie als response.
@@ -44,3 +44,4 @@ def fewshot_prompt_examples(doc, train_df, num_examples, text_column):
 
     prompt += doc_prompt
     return prompt
+
