@@ -2,6 +2,15 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy import sparse
 
+"""
+Code from TimelineExtractionDecisionLettersCASE GitHub
+
+https://github.com/irlabamsterdam/TimeLineExtractionDecisionLettersCASE/blob/main/TimeLineExperiments.ipynb
+
+Reference:
+Bakker, F., Van Heusden, R., & Marx, M. (2024, March). Timeline extraction from decision letters using chatgpt. 
+In Proceedings of the 7th Workshop on Challenges and Applications of Automated Extraction of Socio-political Events from Text (CASE 2024) (pp. 24-31).
+ """
 
 class BM25(object):
     def __init__(self, b=0.75, k1=1.6):
