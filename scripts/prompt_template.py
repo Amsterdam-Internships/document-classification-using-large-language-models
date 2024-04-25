@@ -49,10 +49,16 @@ def fewshot_prompt_examples(doc, train_df, num_examples, text_column):
 
 
 def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
+    # select all texts in train_df, these are possible examples
     examples =list(train_df[text_column].values)
+
+    # calculate BM25 scores for each example
     scores = np.argsort(BM25_model.transform(doc, [item for item in examples]))[::-1]
+
+    # select top examples
     bm25_examples = [examples[score] for score in scores[:num_examples]]
 
+    # start prompt with instructions
     prompt = f"""
     Het is jouw taak om een document te categoriseren in één van de categoriën.
     Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. 
@@ -60,6 +66,7 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
     Categoriën: {get_class_list()}
     """
 
+    # include examples in prompt
     for ex in bm25_examples:
         label = train_df.loc[train_df[text_column]==ex].iloc[0]['label']
         mini_prompt = f"""
@@ -70,16 +77,7 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
         """
         prompt += mini_prompt
 
-    #     prompt += mini_prompt
-
-    # for index, row in bm25_examples.iterrows():
-    #     mini_prompt = f"""
-    # Dit is een voorbeeld document de categorie {row['label']}:
-    #     {row[text_column]}
-    #     """
-
-    #     prompt += mini_prompt
-
+    # give doc to classify
     doc_prompt = f"""
     Categoriseer dit document:
         {doc}
