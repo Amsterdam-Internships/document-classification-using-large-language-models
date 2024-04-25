@@ -1,0 +1,127 @@
+{
+    "os": "Linux-5.15.0-1040-azure-x86_64-with-glibc2.31",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-04-25T09:36:13.984764",
+    "startedAt": "2024-04-25T09:36:12.143507",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "git@github.com:Amsterdam-Internships/document-classification-using-large-language-models.git",
+        "commit": "0865ad1f99d86b44754285bad73bbda008a5e5dd"
+    },
+    "email": "femke.bakker02@gmail.com",
+    "root": "/mnt/batch/tasks/shared/LS_root/mounts/clusters/femke-gpu-16cores-110ram/code/Users/f.bakker/document-classification-using-large-language-models",
+    "host": "femke-gpu-16cores-110ram",
+    "username": "azureuser",
+    "executable": "/anaconda/envs/AmsterdamInContextLearning/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2591.5283125000005,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3226.261,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3239.915,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.442,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 118.05400085449219,
+            "used": 83.53012084960938
+        }
+    },
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla T4",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 108.07489395141602
+    }
+}
