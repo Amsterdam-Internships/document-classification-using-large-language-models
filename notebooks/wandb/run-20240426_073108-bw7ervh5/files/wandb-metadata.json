@@ -1,0 +1,167 @@
+{
+    "os": "Linux-5.15.0-1040-azure-x86_64-with-glibc2.31",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-04-26T07:31:10.876948",
+    "startedAt": "2024-04-26T07:31:08.328402",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "git@github.com:Amsterdam-Internships/document-classification-using-large-language-models.git",
+        "commit": "dc7d5a2c22e9bd9b750af07ae046bcf8cae2ac7a"
+    },
+    "email": "femke.bakker02@gmail.com",
+    "root": "/mnt/batch/tasks/shared/LS_root/mounts/clusters/femke-gpu-24cores-220ram/code/Users/f.bakker/document-classification-using-large-language-models",
+    "host": "femke-gpu-24cores-220ram",
+    "username": "azureuser",
+    "executable": "/anaconda/envs/AmsterdamLLM/bin/python",
+    "cpu_count": 24,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2469.201249999999,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2445.439,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3015.733,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 118.05400085449219,
+            "used": 62.87903594970703
+        }
+    },
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A100 80GB PCIe",
+            "memory_total": 85899345920
+        }
+    ],
+    "memory": {
+        "total": 216.2598648071289
+    }
+}
