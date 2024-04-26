@@ -11,15 +11,17 @@ def get_class_list():
 def simple_prompt(doc):
     prompt = f"""
     Classificeer het document in één van de categoriën.
-    Houd het kort, geef enkel de naam van de categorie als response.
+    Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}
     
     Categoriën: {get_class_list()}
     
     Document: 
     {doc}
-    
+
+    Vul in met de categorie van het document: {{'categorie': ??}}     
     """
     return prompt
+
 
 def fewshot_prompt_examples(doc, train_df, num_examples, text_column):
     examples = train_df.sample(n=num_examples)
