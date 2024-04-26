@@ -14,25 +14,56 @@ These functions can be used for all models/prompts.
 """
 
 
+# """ Given the string response, extract the prediction """
+# def get_prediction_from_response(response):
+#     # get a list of the possible classes
+#     classes_list = pt.get_class_list()
+
+#     predictions = [True if category.lower() in response.lower() else False for category in classes_list]
+
+#     # check if multiple classes were named, this is a prediction error
+#     if Counter(predictions)[True] > 1:
+#         return "PredictionError"
+
+#     # check if exactly one class is named, this is the prediction
+#     elif Counter(predictions)[True] == 1:
+#         prediction = [category.lower() for category in classes_list if category.lower() in response.lower()]
+#         return prediction[0]
+
+#     # if no class is named, then this is a no prediction error
+#     else:
+#         return 'NoPrediction'
+
 """ Given the string response, extract the prediction """
 def get_prediction_from_response(response):
     # get a list of the possible classes
     classes_list = pt.get_class_list()
+    
 
-    predictions = [True if category.lower() in response.lower() else False for category in classes_list]
+    # check if part of string matches given output format to prompt -> Llama is annoying and won't only give the output format :(
+    pattern = r'\{[^{}]+\}'
+    matches = re.findall(pattern, response)
+    if len(matches) == 1:
+        prediction_output = matches[0]
+        predictions = [True if category.lower() in prediction_output.lower() else False for category in classes_list]
 
-    # check if multiple classes were named, this is a prediction error
-    if Counter(predictions)[True] > 1:
-        return "PredictionError"
+        # check if multiple classes were named, this is a prediction error
+        if Counter(predictions)[True] > 1:
+            return "MultiplePredictionErrorInOutput"
 
-    # check if exactly one class is named, this is the prediction
-    elif Counter(predictions)[True] == 1:
-        prediction = [category.lower() for category in classes_list if category.lower() in response.lower()]
-        return prediction[0]
+        # check if exactly one class is named, this is the prediction
+        elif Counter(predictions)[True] == 1:
+            prediction = [category.lower() for category in classes_list if category.lower() in prediction_output.lower()]
+            return prediction[0]
 
-    # if no class is named, then this is a no prediction error
+        # if no class is named, then this is a no prediction error
+        else:
+            return 'NoPredictionInOutput'
+        
+    elif len(matches) > 1:
+        return 'MultiplePredictionErrorInFormatting'
     else:
-        return 'NoPrediction'
+        return 'NoPredictionFormat'
 
 
 

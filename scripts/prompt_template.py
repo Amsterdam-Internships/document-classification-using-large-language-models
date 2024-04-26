@@ -64,7 +64,8 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
     prompt = f"""
     Het is jouw taak om een document te categoriseren in één van de categoriën.
     Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. 
-    
+    Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}
+
     Categoriën: {get_class_list()}
     """
 
@@ -73,9 +74,10 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
         label = train_df.loc[train_df[text_column]==ex].iloc[0]['label']
         mini_prompt = f"""
         \n
-        Dit is een voorbeeld document met categorie {label}:
+        Voorbeeld document met categorie {label}:
         "{ex}"
         \n
+        Voorbeeld output van dit document: {{'categorie: {label}}}
         """
         prompt += mini_prompt
 
@@ -83,6 +85,9 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
     doc_prompt = f"""
     Categoriseer dit document:
         {doc}
+
+    Vul in met de categorie van het document: {{'categorie': ??}}     
+
     """
 
     prompt += doc_prompt
