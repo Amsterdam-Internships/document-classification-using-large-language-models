@@ -71,7 +71,7 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
         label = train_df.loc[train_df[text_column]==ex].iloc[0]['label']
         mini_prompt = f"""
         \n
-        Dit is een voorbeeld document de categorie {label}:
+        Dit is een voorbeeld document met categorie {label}:
         "{ex}"
         \n
         """
