@@ -77,7 +77,7 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
         Voorbeeld document met categorie {label}:
         "{ex}"
         \n
-        Voorbeeld output van dit document: {{'categorie: {label}}}
+        Voorbeeld output van dit document: {{'categorie': '{label}'}}
         """
         prompt += mini_prompt
 
