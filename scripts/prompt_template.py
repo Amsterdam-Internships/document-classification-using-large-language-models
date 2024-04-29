@@ -4,7 +4,7 @@ import numpy as np
 """ Includes all the prompt templates """
 # class list
 def get_class_list():
-    return ['Voordracht', 'Besluit', 'Schriftelijke Vragen', 'Brief', 'Raadsadres', 'Onderzoeksrapport', 'Termijnagenda', 'Raadsnotulen', 'Agenda', 'Motie', 'Actualiteit', 'Factsheets']
+    return ['Voordracht', 'Besluit', 'Schriftelijke Vraag', 'Brief', 'Raadsadres', 'Onderzoeksrapport', 'Termijnagenda', 'Raadsnotulen', 'Agenda', 'Motie', 'Actualiteit', 'Factsheet']
 
 # ---- GEITje----------
 # simple_prompt takes extra input, since those parameters are needed for fewshot prompt. Allows to run same code for experiment. 
