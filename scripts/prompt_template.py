@@ -88,8 +88,6 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
 
     Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}
     Vul in met de categorie van het document: {{'categorie': ??}}    
-
-
     """
 
     prompt += doc_prompt
