@@ -50,6 +50,7 @@ def fewshot_prompt_examples(doc, train_df, num_examples, text_column):
     return prompt
 
 
+
 def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
     # select all texts in train_df, these are possible examples
     examples =list(train_df[text_column].values)
@@ -60,36 +61,83 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
     # select top examples
     bm25_examples = [examples[score] for score in scores[:num_examples]]
 
-    # start prompt with instructions
-    prompt = f"""
-    Het is jouw taak om een document te categoriseren in één van de categoriën.
-    Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. 
+    sys_mes = ("<s>[INST] <<SYS>> Hieronder staat een instructie die een taak beschrijft, " +
+        "gekoppeld aan input die verdere context biedt. "+
+        "Schrijf een reactie die de taak op passende wijze voltooit.<</SYS>> ")
 
-    Categoriën: {get_class_list()}
-    """
+    # start prompt with instructions
+    instruction = ("Het is jouw taak om een document te categoriseren in één van de categoriën. "+
+    f"Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. " +
+    f"Categoriën: {get_class_list()}. "
+    )
 
     # include examples in prompt
     for ex in range(len(bm25_examples)):
         example = bm25_examples[ex]
         label = train_df.loc[train_df[text_column]==example].iloc[0]['label']
-        mini_prompt = f"""
-        \n
-        Voorbeeld document {ex+1}:
-        "{example}"
-        \n
-        Output van voorbeeld document {ex+1}: {{'categorie': {label}}}  
-        """
-        prompt += mini_prompt
+        mini_prompt =(
+            f"Voorbeeld document {ex+1}: " + 
+            f"{example} \n" +
+            f"Output van voorbeeld document {ex+1}: {{'categorie': {label}}} \n")
+        
+        instruction += mini_prompt
 
     # give doc to classify
-    doc_prompt = f"""
-    Categoriseer dit document:
-        {doc}
+    doc_prompt = (f"Categoriseer dit document: "+
+                  f"{doc}\n" +
+                  f"Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}.  [/INST]"
+                #   f"Vul in met de categorie van het document: {{'categorie': ??}} [/INST]" 
+                  )
+    
+    
+ 
 
-    Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}
-    Vul in met de categorie van het document: {{'categorie': ??}}    
-    """
+    prompt = sys_mes + instruction + doc_prompt
+    # prompt = instruction + doc_prompt
 
-    prompt += doc_prompt
+    # print(prompt)
     return prompt
+
+# def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
+#     # select all texts in train_df, these are possible examples
+#     examples =list(train_df[text_column].values)
+
+#     # calculate BM25 scores for each example
+#     scores = np.argsort(BM25_model.transform(doc, [item for item in examples]))[::-1]
+
+#     # select top examples
+#     bm25_examples = [examples[score] for score in scores[:num_examples]]
+
+#     # start prompt with instructions
+#     prompt = f"""
+#     Het is jouw taak om een document te categoriseren in één van de categoriën.
+#     Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. 
+
+#     Categoriën: {get_class_list()}
+#     """
+
+#     # include examples in prompt
+#     for ex in range(len(bm25_examples)):
+#         example = bm25_examples[ex]
+#         label = train_df.loc[train_df[text_column]==example].iloc[0]['label']
+#         mini_prompt = f"""
+#         \n
+#         Voorbeeld document {ex+1}:
+#         "{example}"
+#         \n
+#         Output van voorbeeld document {ex+1}: {{'categorie': {label}}}  
+#         """
+#         prompt += mini_prompt
+
+#     # give doc to classify
+#     doc_prompt = f"""
+#     Categoriseer dit document:
+#         {doc}
+
+#     Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}
+#     Vul in met de categorie van het document: {{'categorie': ??}}    
+#     """
+
+#     prompt += doc_prompt
+#     return prompt
 
