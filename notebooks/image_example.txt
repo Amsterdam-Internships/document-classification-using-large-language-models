@@ -1,0 +1,56 @@
+<s>[INST] <<SYS>> Hieronder staat een instructie die een taak beschrijft, gekoppeld aan input die verdere context biedt. Schrijf een reactie die de taak op passende wijze voltooit.<</SYS>> Het is jouw taak om een document te categoriseren in één van de categoriën. Eerst krijg je een lijst met mogelijke categoriën, daarna 2 voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. Categoriën: ['Voordracht', 'Besluit', 'Schriftelijke Vraag', 'Brief', 'Raadsadres', 'Onderzoeksrapport', 'Raadsnotulen', 'Agenda', 'Motie', 'Actualiteit', 'Factsheet']. Voorbeeld document 1: > < ‚Gemeente nn
+mn ee dj, ST nd
+Enne Ee fi
+Ì
+NE nme 4 NN Fi
+IN Wi il fr ME Ï EE k 4 — p HEE Bel! EI | Il
+Une LLL ka Mn
+KLO ALC 4e | | | Si Ì UE 7 : oo ALD rap:
+Î a Ei a: ge ds H nen, enn MRE! ui arb ria:
+| Ak ge Tac ee TT AE | dai idnn
+ae KL BRR A ee
+, et a Wesel En : |
+d se 7 3 Ì Can = Pe 5
+ER ee ne
+Î rn Ee Zi % RE
+AE zt / Aen 5
+Kef Ee , # 1 î Ek a
+ 
+Output van voorbeeld document 1: {'categorie': Onderzoeksrapport} 
+Voorbeeld document 2: ke Ek
+
+ET pe mann:
+
+AE ET nn oib Ei enter:
+
+. en 3 K Li — Te rte den # Pe == ij .
+
+EE ene ME en Bwa deman Ee ier IN ES
+5 - \ z IE ef e ES an er likden n Ô end gi rf je rr eni
+Te En a En ne ie EE
+
+Ee A al Nt EE Ag ne nn
+WE Lee 1 wi ee" emme: Itt ls te as |= ben EE zi i a PER, nt
+nrd IE Mt ERE Ee Rt en me 7 — PIKE Bn
+Rn: Ed Ne OO | he |
+í —= pe Gt idee: et ke RE St ë Ei he B nnen ut. ek Ee
+e 
+Output van voorbeeld document 2: {'categorie': Onderzoeksrapport} 
+Categoriseer dit document: sn OO EER OOR
+} | Sd mer
+Ean e + » 1 et 1 |
+mes he À B | &
+zr 3 ER 7 f
+Lm de ë in d
+' : Ë Ken de 5 dn ne
+> ge zg & EEN A. | Sh Ja ed ' rj
+Ee KR 5 8 WZ rr il TE - apt _ (n
+ER er tre dn | A
+RR ENNE bh hann 0 ‘
+md B EE Ah: EE | nn > dd
+en en ke Nan
+_ en ma et r \ 5 zt Ha En É S 5 ripe vam TE
+Ee ame om | pi ; | pe : m5
+Ë B 7) nn ra Ë, \ EK # n _
+* Ni EN De AEN 4d
+Geef de output in de vorm van een JSON file: {'categorie': categorie van het document}.  [/INST]
