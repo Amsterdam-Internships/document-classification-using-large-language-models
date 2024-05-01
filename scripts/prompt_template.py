@@ -2,6 +2,7 @@ import numpy as np
 
 
 """ Includes all the prompt templates """
+# prompts are formatted using Llama template.
 # class list
 def get_class_list():
     return ['Voordracht', 'Besluit', 'Schriftelijke Vraag', 'Brief', 'Raadsadres', 'Onderzoeksrapport', 'Raadsnotulen', 'Agenda', 'Motie', 'Actualiteit', 'Factsheet']
@@ -22,10 +23,6 @@ def get_doc_prompt(doc):
     return doc_prompt
 
 
-
-# ---- GEITje----------
-# simple_prompt takes extra input, since those parameters are needed for fewshot prompt. Allows to run same code for experiment. 
-
 def simple_prompt(doc):
     instruction = (f"Classificeer het document in één van de categoriën. " +
     f"Categoriën: {get_class_list()}. ")
@@ -33,20 +30,6 @@ def simple_prompt(doc):
     doc_prompt = get_doc_prompt(doc)
     prompt = SYS_MES + instruction + doc_prompt
     return prompt
-
-# def simple_prompt(doc):
-#     prompt = f"""
-#     Classificeer het document in één van de categoriën.
-#     Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}
-    
-#     Categoriën: {get_class_list()}
-    
-#     Document: 
-#     {doc}
-
-#     Vul in met de categorie van het document: {{'categorie': ??}}     
-#     """
-#     return prompt
 
 
 def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
@@ -79,6 +62,22 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
     doc_prompt = get_doc_prompt(doc)
     prompt = SYS_MES_CONTEXT + instruction + doc_prompt
     return prompt
+
+## OLD prompts
+
+# def simple_prompt(doc):
+#     prompt = f"""
+#     Classificeer het document in één van de categoriën.
+#     Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}
+    
+#     Categoriën: {get_class_list()}
+    
+#     Document: 
+#     {doc}
+
+#     Vul in met de categorie van het document: {{'categorie': ??}}     
+#     """
+#     return prompt
 
 # def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
 #     # select all texts in train_df, these are possible examples
@@ -122,30 +121,3 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
 
 #     prompt += doc_prompt
 #     return prompt
-
-
-def fewshot_prompt_examples(doc, train_df, num_examples, text_column):
-    examples = train_df.sample(n=num_examples)
-
-    prompt = f"""
-    Het is jouw taak om een document te categoriseren in één van de categoriën.
-    Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. 
-    
-    Categoriën: {get_class_list()}
-    """
-
-    for index, row in examples.iterrows():
-        mini_prompt = f"""
-    Dit is een voorbeeld document de categorie {row['label']}:
-        {row[text_column]}
-        """
-
-        prompt += mini_prompt
-
-    doc_prompt = f"""
-    Categoriseer dit document:
-        {doc}
-    """
-
-    prompt += doc_prompt
-    return prompt
