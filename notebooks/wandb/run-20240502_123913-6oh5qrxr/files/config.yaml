@@ -9,7 +9,7 @@ _wandb:
     huggingface_version: 4.39.3
     is_jupyter_run: true
     is_kaggle_kernel: false
-    start_time: 1714649769.0
+    start_time: 1714653555.0
     t:
       1:
       - 1
@@ -100,7 +100,7 @@ num_attention_heads:
   value: 32
 sliding_window:
   desc: null
-  value: null
+  value: 4096
 num_key_value_heads:
   desc: null
   value: 8
@@ -118,7 +118,7 @@ use_cache:
   value: true
 rope_theta:
   desc: null
-  value: 1000000.0
+  value: 10000.0
 attention_dropout:
   desc: null
   value: 0.0
@@ -288,7 +288,7 @@ problem_type:
   value: null
 _name_or_path:
   desc: null
-  value: mistralai/Mistral-7B-Instruct-v0.2
+  value: Rijgersberg/GEITje-7B-chat-v2
 transformers_version:
   desc: null
   value: 4.39.3
@@ -297,7 +297,7 @@ model_type:
   value: mistral
 output_dir:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/MistralSmallData200Tokens_finetuning_output
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/GEITjeSmallData200Tokens_finetuning_output
 overwrite_output_dir:
   desc: null
   value: false
@@ -384,7 +384,7 @@ log_on_each_node:
   value: true
 logging_dir:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/MistralSmallData200Tokens_finetuning_output/runs/May02_12-02-54_femke-gpu-24cores-220ram
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/GEITjeSmallData200Tokens_finetuning_output/runs/May02_12-33-39_femke-gpu-24cores-220ram
 logging_strategy:
   desc: null
   value: steps
@@ -489,7 +489,7 @@ past_index:
   value: -1
 run_name:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/MistralSmallData200Tokens_finetuning_output
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/GEITjeSmallData200Tokens_finetuning_output
 disable_tqdm:
   desc: null
   value: false
@@ -589,7 +589,7 @@ resume_from_checkpoint:
   value: null
 hub_model_id:
   desc: null
-  value: FemkeBakker/MistralSmallData200Tokens
+  value: FemkeBakker/GEITjeSmallData200Tokens
 hub_strategy:
   desc: null
   value: all_checkpoints
