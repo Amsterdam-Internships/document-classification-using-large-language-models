@@ -18,18 +18,24 @@ SYS_MES = ("<s>[INST] <<SYS>> Hieronder staat een instructie die een taak beschr
 def get_doc_prompt(doc):
     doc_prompt = (f"Categoriseer dit document: "+
                 f"{doc}\n" +
-                f"Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}.  [/INST]"
+                f"Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}. "
                 )
     return doc_prompt
 
 
-def simple_prompt(doc):
+def simple_prompt(doc, apply_template=False):
     instruction = (f"Classificeer het document in één van de categoriën. " +
     f"Categoriën: {get_class_list()}. ")
 
     doc_prompt = get_doc_prompt(doc)
-    prompt = SYS_MES + instruction + doc_prompt
+
+    if apply_template==False:
+        prompt = SYS_MES + instruction + doc_prompt + "[/INST]"
+    elif apply_template==True:
+        prompt = instruction + doc_prompt
+
     return prompt
+
 
 
 def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
