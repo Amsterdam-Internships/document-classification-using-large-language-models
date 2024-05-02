@@ -66,7 +66,7 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
         instruction += mini_prompt
 
     doc_prompt = get_doc_prompt(doc)
-    prompt = SYS_MES_CONTEXT + instruction + doc_prompt
+    prompt = SYS_MES_CONTEXT + instruction + doc_prompt + "[/INST]"
     return prompt
 
 ## OLD prompts
