@@ -36,6 +36,26 @@ def simple_prompt(doc, apply_template=False):
 
     return prompt
 
+def simple_prompt_v2(doc):
+    instruction = (f"<s>[INST]Classificeer het document in één van de categoriën. " +
+    f"Categoriën: {get_class_list()}. ")
+    doc_prompt = get_doc_prompt(doc)
+    prompt = instruction + doc_prompt+"[/INST]"
+    return prompt
+
+def OldSimple_prompt(doc):
+    prompt = f"""
+    Classificeer het document in één van de categoriën.
+    Geef de output in de vorm van een JSON file: {{'categorie': categorie van het document}}
+    
+    Categoriën: {get_class_list()}
+    
+    Document: 
+    {doc}
+
+    Vul in met de categorie van het document: {{'categorie': ??}}     
+    """
+    return prompt
 
 
 def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
