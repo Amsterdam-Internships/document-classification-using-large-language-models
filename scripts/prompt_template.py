@@ -23,15 +23,15 @@ def get_doc_prompt(doc):
     return doc_prompt
 
 
-def simple_prompt(doc, apply_template=False):
+def simple_prompt(doc, remove_template=False):
     instruction = (f"Classificeer het document in één van de categoriën. " +
     f"Categoriën: {get_class_list()}. ")
 
     doc_prompt = get_doc_prompt(doc)
 
-    if apply_template==False:
+    if remove_template==False:
         prompt = SYS_MES + instruction + doc_prompt + "[/INST]"
-    elif apply_template==True:
+    elif remove_template==True:
         prompt = instruction + doc_prompt
 
     return prompt
