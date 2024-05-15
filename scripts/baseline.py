@@ -19,7 +19,7 @@ def load_data_split(df, split_col,subset, label_col):
     return X, y
 
 """Function saves predictions and results of a baseline in two seperate files."""
-def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train, subset_test, text_col, label_col, prediction_path, overview_path):
+def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train, subset_test, text_col, label_col, prediction_path, overview_path, run_id):
     start_time = time.time()
 
     ph.check_data_split_input(subset_train, subset_test)
@@ -49,6 +49,7 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
     predictions['prediction'] = y_pred
     predictions['model'] = model_name
     predictions['date'] = date
+    predictions['run_id'] = run_id
 
     # remove unneccary columns
     columns =['set', 'text', 'tokens', 'token_count', 'clean_tokens', 'clean_tokens_count', 'pdf_path', 'clean_text', 'token_count_geitje', 'token_count_mistral', 'token_count_llama2_7b_hf', '4split', '2split']
@@ -64,6 +65,7 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
             [{
                 'model':model_name,
                 'date': date,
+                'run_id': run_id,
                 'train_set': subset_train,
                 'test_set': subset_test,
                 'train_set_support':len(X_train),
@@ -84,6 +86,7 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
         [{
             'model':model_name,
             'date': date,
+            'run_id': run_id,
             'train_set': subset_train,
             'test_set': subset_test,
             'train_set_support':len(X_train),
