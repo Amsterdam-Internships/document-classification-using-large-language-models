@@ -29,3 +29,28 @@ def save_split(df):
     # Combining the DataFrames
     final_df = pd.concat([train_df, test_df, val_df, dev_df])
     return final_df
+
+
+def save_balanced_split(df):
+    # select randomly 100 docs for each class for the test set
+    test_df = df.groupby('label').apply(lambda x: x.sample(n=100)).reset_index(drop=True)
+    test_df['balanced_split'] = 'test'
+    
+    # select all doc ids that are not in the test set
+    train_df = df.loc[~df['id'].isin(test_df['id'])]
+
+    # select maximum of 1500 docs for each class for the training set
+    train_df = train_df.groupby('label').apply(lambda x: x.sample(n=min(len(x), 1500))).reset_index(drop=True)
+
+    # split train set further into train and validation
+    train_df, val_df = train_test_split(train_df, test_size=0.1, random_state=42, stratify=train_df['label'])
+    train_df['balanced_split'] = 'train'
+    val_df['balanced_split'] = 'val'
+
+    # combine all three sets
+    balanced_df = pd.concat([test_df, train_df, val_df])
+    remaining_df = df.loc[~df['id'].isin(balanced_df['id'])]
+    remaining_df['balanced_split'] = 'discard'
+
+    split_df = pd.concat([balanced_df, remaining_df])
+    return split_df
