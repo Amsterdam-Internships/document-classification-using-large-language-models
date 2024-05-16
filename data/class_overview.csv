@@ -1,0 +1,18 @@
+Category,Scraped docs,Status,Converted,Path,path_end
+Actualiteit,996,Collected BUT MESSY!,DONE,raadsinformatie/raadsinformatie/search_results/actualiteit,FILES
+Adviesaanvraag,2480,Collected,DONE,raadsinformatie/raadsinformatie/search_results/adviesaanvraag,FILES
+Agenda,missing,Collected,DONE,raadsinformatie/raadsinformatie/search_results/agenda,FILES
+Agenda,missing,Collected,DONE,raadsinformatie/raadsinformatie/search_results/agenda_amsterdam,FILES
+Amendement,1978,Collected,DONE,raadsinformatie/raadsinformatie/search_results/amendement,FILES
+Begroting,1993,Collected BUT MESSY!,WIP (badly slow),raadsinformatie/raadsinformatie/search_results/begroting,FILES
+Besluit,778,Collected,DONE,raadsinformatie/raadsinformatie/search_results/besluiten,FILES
+Brief,2000,Collected (raadsinformatiebrieven only),DONE,raadsinformatie/raadsinformatie/search_results/raadsinformatiebrief,FILES
+Motie,8350,Collected,DONE,raadsinformatie/raadsinformatie/Moties,FOLDERS
+Onderzoeksrapport,1500,Collected,DONE,raadsinformatie/OpenResearch/onderzoek-in-de-gemeenteraad,FOLDERS
+Raadsadres,1982,Collected BUT A BIT MESSY!,DONE,raadsinformatie/raadsinformatie/search_results/raadsadres,FILES
+Termijnagenda,1000,Collected BUT OVERLAPPING AGENDA + CAN get more,DONE,raadsinformatie/raadsinformatie/search_results/termijnagenda,FILES
+Verslag,273,Collected (cant get more than this),DONE,raadsinformatie/raadsinformatie/search_results/raadsnotulen,FILES
+Voordracht,missing,Collected,DONE,raadsinformatie/raadsinformatie/search_results/voordrachten,FILES
+Voordracht,missing,Collected,DONE,raadsinformatie/raadsinformatie/search_results/voordrachten_amsterdam,FILES
+Schriftelijke Vragen,3019,Collected,DONE,raadsinformatie/raadsinformatie/SchriftelijkeVragen,FILES
+Factsheets,237,Collected but A BIT MESSY towards the end,DONE,raadsinformatie/OpenResearch/factsheets,FILES
