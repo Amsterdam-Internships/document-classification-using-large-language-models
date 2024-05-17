@@ -28,6 +28,7 @@ def save_split(df):
 
     # Combining the DataFrames
     final_df = pd.concat([train_df, test_df, val_df, dev_df])
+    final_df = final_df.sample(frac=1, random_state=42).reset_index(drop=True)
     return final_df
 
 
@@ -53,4 +54,5 @@ def save_balanced_split(df):
     remaining_df['balanced_split'] = 'discard'
 
     split_df = pd.concat([balanced_df, remaining_df])
+    split_df = split_df.sample(frac=1, random_state=42).reset_index(drop=True)
     return split_df
