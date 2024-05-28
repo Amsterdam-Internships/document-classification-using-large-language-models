@@ -31,6 +31,22 @@ _wandb:
       5: 1
       6:
       - 1
+    - 1: eval/loss
+      5: 1
+      6:
+      - 1
+    - 1: eval/runtime
+      5: 1
+      6:
+      - 1
+    - 1: eval/samples_per_second
+      5: 1
+      6:
+      - 1
+    - 1: eval/steps_per_second
+      5: 1
+      6:
+      - 1
     python_version: 3.9.19
     start_time: 1716881657.422713
     t:
