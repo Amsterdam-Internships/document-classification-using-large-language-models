@@ -2,13 +2,13 @@ wandb_version: 1
 
 _name_or_path:
   desc: null
-  value: stabilityai/stablelm-2-1_6b
+  value: mistralai/Mistral-7B-Instruct-v0.2
 _wandb:
   desc: null
   value:
     cli_version: 0.13.3
     framework: huggingface
-    huggingface_version: 4.40.2
+    huggingface_version: 4.41.1
     is_jupyter_run: true
     is_kaggle_kernel: false
     m:
@@ -48,7 +48,7 @@ _wandb:
       6:
       - 1
     python_version: 3.9.19
-    start_time: 1716890082.055937
+    start_time: 1716990082.730392
     t:
       1:
       - 1
@@ -70,10 +70,11 @@ _wandb:
       - 71
       3:
       - 7
+      - 13
       - 23
       4: 3.9.19
       5: 0.13.3
-      6: 4.40.2
+      6: 4.41.1
       8:
       - 1
       - 5
@@ -85,6 +86,7 @@ accelerator_config:
     dispatch_batches: null
     even_batches: true
     gradient_accumulation_kwargs: null
+    non_blocking: false
     split_batches: false
     use_seedable_sampler: true
 adafactor:
@@ -105,7 +107,7 @@ add_cross_attention:
 architectures:
   desc: null
   value:
-  - StableLmForCausalLM
+  - MistralForCausalLM
 attention_dropout:
   desc: null
   value: 0.0
@@ -115,6 +117,9 @@ auto_find_batch_size:
 bad_words_ids:
   desc: null
   value: null
+batch_eval_metrics:
+  desc: null
+  value: false
 begin_suppress_tokens:
   desc: null
   value: null
@@ -126,7 +131,7 @@ bf16_full_eval:
   value: false
 bos_token_id:
   desc: null
-  value: 100257
+  value: 1
 chunk_size_feed_forward:
   desc: null
   value: 0
@@ -204,7 +209,7 @@ encoder_no_repeat_ngram_size:
   value: 0
 eos_token_id:
   desc: null
-  value: 100257
+  value: 2
 eval_accumulation_steps:
   desc: null
   value: null
@@ -217,6 +222,9 @@ eval_do_concat_batches:
 eval_steps:
   desc: null
   value: 123
+eval_strategy:
+  desc: null
+  value: steps
 evaluation_strategy:
   desc: null
   value: steps
@@ -284,18 +292,15 @@ half_precision_backend:
 hidden_act:
   desc: null
   value: silu
-hidden_dropout:
-  desc: null
-  value: 0.0
 hidden_size:
   desc: null
-  value: 2048
+  value: 4096
 hub_always_push:
   desc: null
   value: false
 hub_model_id:
   desc: null
-  value: FemkeBakker/tryoutstablelm
+  value: FemkeBakker/AmsterdamDocClassificationMistral200T
 hub_private_repo:
   desc: null
   value: true
@@ -327,7 +332,7 @@ initializer_range:
   value: 0.02
 intermediate_size:
   desc: null
-  value: 5632
+  value: 14336
 is_decoder:
   desc: null
   value: false
@@ -348,9 +353,6 @@ label_names:
 label_smoothing_factor:
   desc: null
   value: 0.0
-layer_norm_eps:
-  desc: null
-  value: 1.0e-05
 learning_rate:
   desc: null
   value: 1.0e-05
@@ -377,7 +379,7 @@ log_on_each_node:
   value: true
 logging_dir:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/stablelm_tryout/runs/May28_14-17-15_femke-gpu-16cores-110ram
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/AmsterdamDocClassificationMistral200T/runs/May29_13-36-42_femke-gpu-24cores-220ram
 logging_first_step:
   desc: null
   value: true
@@ -404,7 +406,7 @@ max_length:
   value: 20
 max_position_embeddings:
   desc: null
-  value: 4096
+  value: 32768
 max_steps:
   desc: null
   value: -1
@@ -416,7 +418,7 @@ min_length:
   value: 0
 model_type:
   desc: null
-  value: stablelm
+  value: mistral
 mp_parameters:
   desc: null
   value: ''
@@ -440,16 +442,16 @@ num_beams:
   value: 1
 num_hidden_layers:
   desc: null
-  value: 24
+  value: 32
 num_key_value_heads:
   desc: null
-  value: 32
+  value: 8
 num_return_sequences:
   desc: null
   value: 1
 num_train_epochs:
   desc: null
-  value: 2
+  value: 1
 optim:
   desc: null
   value: adamw_bnb_8bit
@@ -464,7 +466,7 @@ output_attentions:
   value: false
 output_dir:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/stablelm_tryout
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/AmsterdamDocClassificationMistral200T
 output_hidden_states:
   desc: null
   value: false
@@ -476,10 +478,7 @@ overwrite_output_dir:
   value: false
 pad_token_id:
   desc: null
-  value: 100257
-partial_rotary_factor:
-  desc: null
-  value: 0.25
+  value: 0
 past_index:
   desc: null
   value: -1
@@ -519,9 +518,6 @@ push_to_hub_organization:
 push_to_hub_token:
   desc: null
   value: <PUSH_TO_HUB_TOKEN>
-qk_layernorm:
-  desc: null
-  value: false
 ray_scope:
   desc: null
   value: last
@@ -539,6 +535,9 @@ report_to:
   value:
   - tensorboard
   - wandb
+restore_callback_states_from_checkpoint:
+  desc: null
+  value: false
 resume_from_checkpoint:
   desc: null
   value: null
@@ -548,15 +547,15 @@ return_dict:
 return_dict_in_generate:
   desc: null
   value: false
-rope_scaling:
+rms_norm_eps:
   desc: null
-  value: null
+  value: 1.0e-05
 rope_theta:
   desc: null
-  value: 10000
+  value: 1000000.0
 run_name:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/stablelm_tryout
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/AmsterdamDocClassificationMistral200T
 save_on_each_node:
   desc: null
   value: false
@@ -584,6 +583,9 @@ sep_token_id:
 skip_memory_metrics:
   desc: null
   value: true
+sliding_window:
+  desc: null
+  value: null
 split_batches:
   desc: null
   value: null
@@ -643,7 +645,7 @@ tpu_num_cores:
   value: null
 transformers_version:
   desc: null
-  value: 4.40.2
+  value: 4.41.1
 typical_p:
   desc: null
   value: 1.0
@@ -665,15 +667,9 @@ use_legacy_prediction_loop:
 use_mps_device:
   desc: null
   value: false
-use_parallel_residual:
-  desc: null
-  value: false
-use_qkv_bias:
-  desc: null
-  value: true
 vocab_size:
   desc: null
-  value: 100352
+  value: 32000
 warmup_ratio:
   desc: null
   value: 0.1

@@ -46,8 +46,8 @@ def zeroshot_prompt_geitje(doc):
     """
     return prompt
 
-# fewshot prompt
-def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
+
+def fewshot_prompt_with_template(doc, train_df, num_examples, text_column, BM25_model):
     # select all texts in train_df, these are possible examples
     examples =list(train_df[text_column].values)
 
@@ -58,7 +58,39 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
     bm25_examples = [examples[score] for score in scores[:num_examples]]
 
     # start prompt with instructions
-    instruction = ("Het is jouw taak om een document te categoriseren in één van de categoriën. "+
+    instruction = ("Classificeer het document in één van de categoriën. "+
+    f"Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. " +
+    f"Categoriën: {pt.get_class_list()}. "
+    )
+
+    # include examples in prompt
+    for ex in range(len(bm25_examples)):
+        example = bm25_examples[ex]
+        label = train_df.loc[train_df[text_column]==example].iloc[0]['label']
+        mini_prompt =(
+            f"Voorbeeld document {ex+1}: " + 
+            f"{example} \n" +
+            f"Output van voorbeeld document {ex+1}: {{'categorie': {label}}} \n")
+        
+        instruction += mini_prompt
+
+    doc_prompt = pt.get_doc_prompt(doc)
+    prompt = "<s>[INST] " + instruction + doc_prompt + "[/INST]"
+    return prompt
+
+
+def fewshot_prompt_no_template(doc, train_df, num_examples, text_column, BM25_model):
+    # select all texts in train_df, these are possible examples
+    examples =list(train_df[text_column].values)
+
+    # calculate BM25 scores for each example
+    scores = np.argsort(BM25_model.transform(doc, [item for item in examples]))[::-1]
+
+    # select top examples
+    bm25_examples = [examples[score] for score in scores[:num_examples]]
+
+    # start prompt with instructions
+    instruction = ("Classificeer het document in één van de categoriën. "+
     f"Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. " +
     f"Categoriën: {get_class_list()}. "
     )
@@ -75,8 +107,74 @@ def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
         instruction += mini_prompt
 
     doc_prompt = get_doc_prompt(doc)
-    prompt = SYS_MES_CONTEXT + instruction + doc_prompt + "[/INST]"
+    prompt = instruction + doc_prompt
     return prompt
+
+
+# def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
+#     # select all texts in train_df, these are possible examples
+#     examples =list(train_df[text_column].values)
+
+#     # calculate BM25 scores for each example
+#     scores = np.argsort(BM25_model.transform(doc, [item for item in examples]))[::-1]
+
+#     # select top examples
+#     bm25_examples = [examples[score] for score in scores[:num_examples]]
+
+#     # start prompt with instructions
+#     instruction = ("Classificeer het document in één van de categoriën. "+
+#     f"Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. " +
+#     f"Categoriën: {get_class_list()}. "
+#     )
+
+#     # include examples in prompt
+#     for ex in range(len(bm25_examples)):
+#         example = bm25_examples[ex]
+#         label = train_df.loc[train_df[text_column]==example].iloc[0]['label']
+#         mini_prompt =(
+#             f"Voorbeeld document {ex+1}: " + 
+#             f"{example} \n" +
+#             f"Output van voorbeeld document {ex+1}: {{'categorie': {label}}} \n")
+        
+#         instruction += mini_prompt
+
+#     doc_prompt = get_doc_prompt(doc)
+#     # prompt = SYS_MES_CONTEXT + instruction + doc_prompt + "[/INST]"
+#     prompt = "<s>[INST] " + instruction + doc_prompt + "[/INST]"
+#     return prompt
+
+
+# fewshot prompt
+# def fewshot_prompt_bm25(doc, train_df, num_examples, text_column, BM25_model):
+#     # select all texts in train_df, these are possible examples
+#     examples =list(train_df[text_column].values)
+
+#     # calculate BM25 scores for each example
+#     scores = np.argsort(BM25_model.transform(doc, [item for item in examples]))[::-1]
+
+#     # select top examples
+#     bm25_examples = [examples[score] for score in scores[:num_examples]]
+
+#     # start prompt with instructions
+#     instruction = ("Het is jouw taak om een document te classificeren in één van de categoriën. "+
+#     f"Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. " +
+#     f"Categoriën: {get_class_list()}. "
+#     )
+
+#     # include examples in prompt
+#     for ex in range(len(bm25_examples)):
+#         example = bm25_examples[ex]
+#         label = train_df.loc[train_df[text_column]==example].iloc[0]['label']
+#         mini_prompt =(
+#             f"Voorbeeld document {ex+1}: " + 
+#             f"{example} \n" +
+#             f"Output van voorbeeld document {ex+1}: {{'categorie': {label}}} \n")
+        
+#         instruction += mini_prompt
+
+#     doc_prompt = get_doc_prompt(doc)
+#     prompt = SYS_MES_CONTEXT + instruction + doc_prompt + "[/INST]"
+#     return prompt
 
 ### OLD code
 
