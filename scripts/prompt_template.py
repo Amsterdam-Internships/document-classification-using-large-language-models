@@ -60,7 +60,7 @@ def fewshot_prompt_with_template(doc, train_df, num_examples, text_column, BM25_
     # start prompt with instructions
     instruction = ("Classificeer het document in één van de categoriën. "+
     f"Eerst krijg je een lijst met mogelijke categoriën, daarna {num_examples} voorbeelden van documenten en tot slot het document dat gecategoriseerd moet worden. " +
-    f"Categoriën: {pt.get_class_list()}. "
+    f"Categoriën: {get_class_list()}. "
     )
 
     # include examples in prompt
@@ -74,7 +74,7 @@ def fewshot_prompt_with_template(doc, train_df, num_examples, text_column, BM25_
         
         instruction += mini_prompt
 
-    doc_prompt = pt.get_doc_prompt(doc)
+    doc_prompt = get_doc_prompt(doc)
     prompt = "<s>[INST] " + instruction + doc_prompt + "[/INST]"
     return prompt
 
