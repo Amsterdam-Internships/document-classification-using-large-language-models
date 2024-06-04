@@ -2,7 +2,7 @@ wandb_version: 1
 
 _name_or_path:
   desc: null
-  value: Rijgersberg/GEITje-7B-chat-v2
+  value: meta-llama/Llama-2-7b-chat-hf
 _wandb:
   desc: null
   value:
@@ -107,7 +107,7 @@ add_cross_attention:
 architectures:
   desc: null
   value:
-  - MistralForCausalLM
+  - LlamaForCausalLM
 attention_bias:
   desc: null
   value: false
@@ -303,7 +303,7 @@ hub_always_push:
   value: false
 hub_model_id:
   desc: null
-  value: FemkeBakker/AmsterdamDocClassificationGEITje200T1Epochs
+  value: FemkeBakker/AmsterdamDocClassificationLlama200T3Epochs
 hub_private_repo:
   desc: null
   value: true
@@ -335,7 +335,7 @@ initializer_range:
   value: 0.02
 intermediate_size:
   desc: null
-  value: 14336
+  value: 11008
 is_decoder:
   desc: null
   value: false
@@ -382,7 +382,7 @@ log_on_each_node:
   value: true
 logging_dir:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/1epochs/AmsterdamDocClassificationGEITje200T1Epochs/runs/Jun03_14-00-56_femke-gpu-24cores-220ram
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/AmsterdamDocClassificationLlama200T3Epochs/runs/Jun03_14-59-26_femke-gpu-24cores-220ram
 logging_first_step:
   desc: null
   value: true
@@ -409,7 +409,7 @@ max_length:
   value: 20
 max_position_embeddings:
   desc: null
-  value: 32768
+  value: 4096
 max_steps:
   desc: null
   value: -1
@@ -424,7 +424,7 @@ mlp_bias:
   value: false
 model_type:
   desc: null
-  value: mistral
+  value: llama
 mp_parameters:
   desc: null
   value: ''
@@ -451,13 +451,13 @@ num_hidden_layers:
   value: 32
 num_key_value_heads:
   desc: null
-  value: 8
+  value: 32
 num_return_sequences:
   desc: null
   value: 1
 num_train_epochs:
   desc: null
-  value: 1
+  value: 3
 optim:
   desc: null
   value: adamw_bnb_8bit
@@ -472,7 +472,7 @@ output_attentions:
   value: false
 output_dir:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/1epochs/AmsterdamDocClassificationGEITje200T1Epochs
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/AmsterdamDocClassificationLlama200T3Epochs
 output_hidden_states:
   desc: null
   value: false
@@ -567,7 +567,7 @@ rope_theta:
   value: 10000.0
 run_name:
   desc: null
-  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/1epochs/AmsterdamDocClassificationGEITje200T1Epochs
+  value: /home/azureuser/cloudfiles/code/blobfuse/raadsinformatie/processed_data/woo_document_classification/finetuning_output/AmsterdamDocClassificationLlama200T3Epochs
 save_on_each_node:
   desc: null
   value: false
