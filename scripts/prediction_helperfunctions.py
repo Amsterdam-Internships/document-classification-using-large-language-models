@@ -41,7 +41,8 @@ def get_prediction_from_response(response):
     
 
     # check if part of string matches given output format to prompt -> Llama is annoying and won't only give the output format :(
-    pattern = r'\{[^{}]+\}'
+    # pattern = r'\{[^{}]+\}'
+    pattern = r'\{[^{}]*categorie[^{}]*\}'
     matches = re.findall(pattern, response)
     if len(matches) == 1:
         prediction_output = matches[0]
