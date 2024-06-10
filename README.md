@@ -43,6 +43,22 @@ git clone https://github.com/AmsterdamInternships/document-classification-using-
 
 2) Install all dependencies:
     
+Right now, im having trouble with setting up the requirements.txt files. I will get to that later, for now, the most important libraries to install to get the fine-tuning to work are:
+
+```bash
+- pip install torch
+- pip install datasets
+- pip install transformers
+- pip install trl
+- pip install accelerate 
+- pip install sentencepiece
+- pip install jupyter
+- pip install protobuf 
+pip install bitsandbytes
+pip install bnb
+pip install wandb==0.13.3 --upgrade
+pip install tensorboardX
+```
 
 
 ```bash
