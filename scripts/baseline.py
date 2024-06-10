@@ -9,8 +9,6 @@ import pandas as pd
 This file contains functions to run the baselines.
 """
 
-
-
 """Function returns X and y set for either the train, val, test or dev set."""
 def load_data_split(df, split_col,subset, label_col):
     subdf = df.loc[df[split_col]==subset]
@@ -52,7 +50,7 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
     predictions['run_id'] = run_id
 
     # remove unneccary columns
-    columns =['set', 'text', 'tokens', 'token_count', 'clean_tokens', 'clean_tokens_count', 'pdf_path', 'clean_text', 'token_count_geitje', 'token_count_mistral', 'token_count_llama2_7b_hf', '4split', '2split']
+    columns =['set', 'text', 'tokens', 'token_count', 'clean_tokens', 'clean_tokens_count', 'pdf_path', 'clean_text', 'token_count_geitje', 'token_count_mistral', 'token_count_llama2_7b_hf', '4split', '2split', 'count_MistralTokens', 'count_LlamaTokens', 'balanced_split', 'num_pages', 'MistralTokens', 'LlamaTokens', 'old_label', 'md5_hash', 'trunc_col']
     remove_col = [col for col in columns if col in dataframe.columns]
     predictions = predictions.drop(columns=remove_col)
 
@@ -77,6 +75,9 @@ def run_baseline(baseline_function,model_name, dataframe,split_col, subset_train
                 'macro_avg_precision': precision_score(y_test, y_pred, average='macro'),
                 'macro_avg_recall': recall_score(y_test, y_pred, average='macro'),
                 'macro_avg_f1': f1_score(y_test, y_pred, average='macro'),
+                'weighted_avg_precision': precision_score(y_test, y_pred, average='weighted'),
+                'weighted_avg_recall': recall_score(y_test, y_pred, average='weighted'),
+                'weighted_avg_f1': f1_score(y_test, y_pred, average='weighted'),
                 'classification_report':report
             }   ]
         )
