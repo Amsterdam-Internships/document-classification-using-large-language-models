@@ -103,6 +103,10 @@ Stand-alone notebooks:
 - EDA/EDA_clean_for_submission
 - data_insight -> still messy. use it now to get some quick results for either overleaf or to check something in the data.
 
+## TODO:
+- EDA?
+- clean up finetuning overview_model file
+- fix requirements file
 
 Can be divided in subsections:
 
