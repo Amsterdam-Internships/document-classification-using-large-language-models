@@ -93,7 +93,7 @@ All code can be run in the notebooks. They have been numbered in the right order
 * [`3TokenizeText`](./notebooks/3TokenizeText.ipynb) -> Tokenize the documents using either the Mistral or the Llama tokenizer. 
 * [`4FinetuningDataFormatting`](./notebooks/4FinetuningDataFormatting.ipynb) -> Format the data frame with documents into a dataset that is pushed to HuggingFace. 
 * [`5Finetuning`](./notebooks/5Finetuning.ipynb) -> Finetune the LLMs on the dataset on HuggingFace.
-* [`6GetPredictions`](./notebooks/6GetPredictions.ipynb) -> Run the experiments for the LLMs (IC and FT(.
+* [`6GetPredictions`](./notebooks/6GetPredictions.ipynb) -> Run the experiments for the LLMs (IC and FT).
 * [`7RepairMistralPredictions`](./notebooks/7RepairMistralPredictions.ipynb) -> Repair mistakes made by mistral. Exceptional to Mistral. 
 * [`8baseline`](./notebooks/8baseline.ipynb) -> Train the baselines and run the experiments. 
 * [`9plot`](./notebooks/9plot.ipynb) -> Notebook with plots. 
