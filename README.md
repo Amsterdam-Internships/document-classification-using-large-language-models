@@ -104,9 +104,11 @@ Stand-alone notebooks:
 - data_insight -> still messy. use it now to get some quick results for either overleaf or to check something in the data.
 
 ## TODO:
-- EDA?
 - clean up finetuning overview_model file
 - fix requirements file
+- Make EDA runnable
+- publish dataset?
+- local paths: Create outputfile with 10 docs per class (demo data). Check hardcoding for split function. Check if all code is runnable on this demo function. Only different thing in code should be replacement of configure file.
 
 Can be divided in subsections:
 
