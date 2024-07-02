@@ -19,28 +19,30 @@ This repo contains code to:
 
 _Include abstract?_
 
+NOTE. We're aiming to publise this repo by the end of this week (5 july). 
+
 ## Overleaf Link
 [Thesis Design](https://www.overleaf.com/2549441224szvvffnxqsdk#eda3e6)
 
 
 [Thesis](https://www.overleaf.com/8368827141bwgxbjwcfgfv#3d9efc)
 
-## Background
-I dont think this section is necessary? What would I put here?
+<!-- ## Background
+I dont think this section is necessary? What would I put here? -->
 
 ## Folder Structure
 * [`notebooks`](./notebooks): Jupyter notebooks / tutorials
 * [`PredictionAnalysis`](./PredictionAnalysis): Only jupyter notebooks about prediction analysis 
-* [`scripts`](./scripts): Scripts for automating tasks -> RENAME INTO SRC?
+<!-- * [`scripts`](./scripts): Scripts for automating tasks -> RENAME INTO SRC? -->
 * [`src`](./src): All sourcecode files specific to this project 
 * [`output`](./output) Folder to save data and predictions. Same structure as the Blobfuse folder.
 
-I put remove after folder that I don't think I'll need. 
+<!-- I put remove after folder that I don't think I'll need. 
 * [`data`](./data): Sample data for demo purposes -> REMOVE?
 * [`docs`](./docs): If main [README.md](./README.md) is not enough -> REMOVE?
 * [`res`](./res): Relevant resources, e.g. [`images`](./res/images/) for the documentation -> REMOVE?
 * [`tests`](./tests) Unit tests -> REMOVE?
-* [`res`](./res): Relevant resources, e.g. [`images`](./res/images/) for the documentation -> REMOVE?
+* [`res`](./res): Relevant resources, e.g. [`images`](./res/images/) for the documentation -> REMOVE? -->
 
 
 
@@ -83,8 +85,8 @@ pip install -r requirements.txt
 
 The code has been tested with Python 3.9 on Windows. 
 
-## Usage
-What do I need to put here?
+<!-- ## Usage
+What do I need to put here? -->
 ## How it works
 All code can be run in the notebooks. They have been numbered in the right order of usage.
 * [`0FileOverview`](./notebooks/0FileOverview.ipynb) -> An overview of all the data files and their columns explained. Does not include code. 
@@ -102,12 +104,11 @@ All code can be run in the notebooks. They have been numbered in the right order
 Stand-alone notebooks:
 - EDA/EDA_clean_for_submission
 - data_insight -> still messy. use it now to get some quick results for either overleaf or to check something in the data.
-
+<!-- 
 ## TODO:
 - clean up finetuning overview_model file
 - fix requirements file
 - Make EDA runnable
-- publish dataset?
 - local paths: Create outputfile with 10 docs per class (demo data). Check hardcoding for split function. Check if all code is runnable on this demo function. Only different thing in code should be replacement of configure file.
 
 Can be divided in subsections:
@@ -120,7 +121,7 @@ OR
 
 ### training
 ### prediction
-### evaluation
+### evaluation -->
 
 ## Contributing
 
