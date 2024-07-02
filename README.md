@@ -19,7 +19,6 @@ This repo contains code to:
 
 _Include abstract?_
 
-NOTE. We're aiming to publise this repo by the end of this week (5 july). 
 
 ## Overleaf Link
 [Thesis Design](https://www.overleaf.com/2549441224szvvffnxqsdk#eda3e6)
