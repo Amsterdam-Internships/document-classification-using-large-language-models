@@ -60,7 +60,7 @@ Right now, im having trouble with setting up the requirements.txt files. I will 
 ```bash
 pip install torch
 pip install datasets==2.19.1
-pip install transformers
+pip install transformers==4.40.2
 pip install trl
 pip install accelerate 
 pip install sentencepiece
