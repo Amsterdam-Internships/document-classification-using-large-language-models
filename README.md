@@ -72,10 +72,8 @@ pip install wandb==0.13.3 --upgrade
 pip install tensorboardX
 ```
 
+We have included a [requirements.txt](requirements.txt) file. where all libraries and their versions are available
 
-```bash
-pip install -r requirements.txt
-```
 
 The code has been tested with Python 3.9 on Windows. 
 
