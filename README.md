@@ -15,11 +15,11 @@ The research consists of four main parts:
 
 
 
-## Overleaf Link
+<!-- ## ## Overleaf Link
 [Thesis Design](https://www.overleaf.com/2549441224szvvffnxqsdk#eda3e6)
 
 
-[Thesis](https://www.overleaf.com/8368827141bwgxbjwcfgfv#3d9efc)
+[Thesis](https://www.overleaf.com/8368827141bwgxbjwcfgfv#3d9efc)-->
 
 <!-- ## Background
 I dont think this section is necessary? What would I put here? -->
