@@ -129,9 +129,7 @@ Feel free to help out! [Open an issue](https://github.com/AmsterdamInternships/d
 
 This repository was created in collaboration with [Amsterdam Intelligence](https://amsterdamintelligence.com/) for the City of Amsterdam.
 
-
-
-Optional: add citation or references here.
+This repository contains the code for the thesis: TODOOOOO
 
 
 ## License 
