@@ -3,6 +3,9 @@
 This repo is for code related to the project Document Classification under the Woo (Open Government Act). The goal of this research is to find an effective method to classify documents that the Municipality of Amsterdam publishes. 
 We evaluate three LLMs for this task: Llama, Mistral and GEITje. 
 
+![overview](general_approach.png)
+
+
 The research consists of four main parts:
 1. Truncation experiment. The documents are too long to give as input to the models, thus a truncation experiment is run to find the best truncation threshold to shorten the documents.
 2. In-context learning experiment. To evaluate how well the LLMs perform this task in their current state an in-context learning experiment is performed. We compare the performance of a zero-shot prompt to that of a few-shot prompt.
