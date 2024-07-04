@@ -12,15 +12,7 @@ The research consists of four main parts:
 3. Fine-tuning experiment. We compare the results of the in-context learning to that of the LLMs after they have been fine-tuned on the task.
 4. Baselines experiment. To evaluate the worthwhile of the LLMs, we compare them to simple baselines, such as Naïve Bayes and Linear SVM.
 
-This repo contains code to:
-- Clean the data
-- Truncate the documents
-- Format the data for finetuning
-- Fine-tune LLMs
-- Run experiments on LLMs
-- Run experiments on baselines
 
-_Include abstract?_
 
 
 ## Overleaf Link
