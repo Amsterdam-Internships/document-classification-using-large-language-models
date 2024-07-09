@@ -32,9 +32,14 @@ def save_split(df):
     return final_df
 
 
-def save_balanced_split(df):
-    # select randomly 100 docs for each class for the test set
-    test_df = df.groupby('label').apply(lambda x: x.sample(n=100)).reset_index(drop=True)
+def save_balanced_split(df, demo=False):
+    if demo==False:
+        n_test = 100
+    else:
+        n_test = 1
+
+    # select randomly n_test docs for each class for the test set
+    test_df = df.groupby('label').apply(lambda x: x.sample(n=n_test)).reset_index(drop=True)
     test_df['balanced_split'] = 'test'
     
     # select all doc ids that are not in the test set

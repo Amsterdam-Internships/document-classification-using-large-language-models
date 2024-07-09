@@ -25,6 +25,9 @@ The research consists of four main parts:
 I dont think this section is necessary? What would I put here? -->
 
 ## Folder Structure
+* [`local_data`](./local_data): Folder with data, structure matches the folder on Azure. 
+* [`local_data/data_files`](./local_data/data_files): Folder with demo files. 
+* [`local_data/predictionsFinal`](./local_data/predictionsFinal): Folder structure to save the predictions. Does not include predictions, predictions are saved on Azure.
 * [`notebooks`](./notebooks): Jupyter notebooks / tutorials
 * [`PredictionAnalysis`](./PredictionAnalysis): Only jupyter notebooks about prediction analysis 
 <!-- * [`scripts`](./scripts): Scripts for automating tasks -> RENAME INTO SRC? -->
