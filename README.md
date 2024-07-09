@@ -97,9 +97,9 @@ All code can be run in the notebooks. They have been numbered in the right order
 
 Stand-alone notebooks:
 - EDA/EDA_clean_for_submission
+- [`load_txt_azure`](./notebooks/load_txt_azure.ipynb) -> Azure version of 1loadtxt.ipynb. The folders on Blobfuse are messily structured.
 - [`RepairMistralPredictions`](./notebooks/RepairMistralPredictions.ipynb) -> Repair mistakes made by mistral. Exceptional to Mistral. 
-<!-- - data_insight -> still messy. use it now to get some quick results for either overleaf or to check something in the data. -->
-<!-- 
+
 ## TODO:
 - clean up finetuning overview_model file
 - fix requirements file
