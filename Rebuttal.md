@@ -13,6 +13,7 @@ This file contains the images to be included in the rebuttal.
 ### Q4. Classification Reports and Confusion Matrixes
 ![image](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/7dc0c674-d4e7-40c5-8ea3-e301402fac4b) ![image](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/f7ffe732-5e7a-4c82-984f-91d1777d3e87)
 
-![FT_mistral_3epochs](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/840ed5b0-c294-4bc7-ba6f-939411b5f0d9)  
 
-![LINEARSVM_FULLTEXT](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/c6d98dea-2575-4ebc-9d70-7698f39a6520)
+![FT_mistral_3epochs](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/b8491e26-e429-4a53-9fcb-699158df63a5)
+
+![LINEARSVM_FULLTEXT](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/a316c323-e17f-41af-beb9-31ec4774c2b4)
