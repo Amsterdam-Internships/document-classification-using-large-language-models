@@ -31,7 +31,10 @@ def save_split(df):
     final_df = final_df.sample(frac=1, random_state=42).reset_index(drop=True)
     return final_df
 
-
+# split the data into a balanced split
+# for the original data this means -> test = 100 docs per class; train = the rest of the docs with max 1500 per class; train further split 90/10 into train and val. 
+# for the demo data this means -> the same, except test = 1 docs per class. 
+# does not actually save! 
 def save_balanced_split(df, demo=False):
     if demo==False:
         n_test = 100
