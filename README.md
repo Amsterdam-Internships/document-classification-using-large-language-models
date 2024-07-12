@@ -97,6 +97,9 @@ Stand-alone notebooks:
 
 Feel free to help out! [Open an issue](https://github.com/AmsterdamInternships/document-classification-using-large-language-models/issues), submit a [PR](https://github.com/AmsterdamInternships/document-classification-using-large-language-models/pulls)  or [contact us](https://amsterdamintelligence.com/contact/).
 
+## HuggingFace
+The fine-tuned models, the dataset with the complete documents and the conversation dataset used to fine-tune the models are published on [HuggingFace](https://huggingface.co/collections/FemkeBakker/amsterdam-document-classification-668124ff013da4323fd2edc0).
+
 
 ## Acknowledgements
 
