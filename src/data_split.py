@@ -33,13 +33,15 @@ def save_split(df):
 
 # split the data into a balanced split
 # for the original data this means -> test = 100 docs per class; train = the rest of the docs with max 1500 per class; train further split 90/10 into train and val. 
-# for the demo data this means -> the same, except test = 1 docs per class. 
+# for the demo data this means -> the same, except test = 2 docs per class. 
 # does not actually save! 
 def save_balanced_split(df, demo=False):
     if demo==False:
-        n_test = 100
+        n_test = 100 # amount of docs in test set per class
+        n_val_size = 0.1 # this is used to split training into train and val
     else:
-        n_test = 1
+        n_test = 2 # amount of docs in test set per class
+        n_val_size = 0.2 # this is used to split training into train and val
 
     # select randomly n_test docs for each class for the test set
     test_df = df.groupby('label').apply(lambda x: x.sample(n=n_test)).reset_index(drop=True)
@@ -52,7 +54,7 @@ def save_balanced_split(df, demo=False):
     train_df = train_df.groupby('label').apply(lambda x: x.sample(n=min(len(x), 1500))).reset_index(drop=True)
 
     # split train set further into train and validation
-    train_df, val_df = train_test_split(train_df, test_size=0.1, random_state=42, stratify=train_df['label'])
+    train_df, val_df = train_test_split(train_df, test_size=n_val_size, random_state=42, stratify=train_df['label'])
     train_df['balanced_split'] = 'train'
     val_df['balanced_split'] = 'val'
 

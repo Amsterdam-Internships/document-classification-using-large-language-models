@@ -1,0 +1,505 @@
+> < Gemeente Raadsinformatiebrief
+
+% Amsterdam
+Aan: De leden van de gemeenteraad van Amsterdam
+Datum 10 maart 2021
+Portefeuille(s) Water
+Portefeuillehouder(s): _ Dhr. Egbert de Vries
+Behandeld door Waternet (Bestuurlijke. Zaken. Amsterdam@ Waternet..nl)
+Onderwerp Voortgang digitale veiligheid Waternet
+Geachte leden van de gemeenteraad,
+Op 3 december 2020 bent u door mijn voorganger geïnformeerd over de stand van zaken rondom
+de digitale veiligheid van Waternet. Met deze brief informeer ik v over wat er sinds december 2020
+is opgepakt met betrekking tot:
+1. hetin beeld brengen en mitigeren van risico’s voor digitale veiligheid op de korte termijn,
+2. de aanstelling van een Chief Information Officer (CIO),
+3. deintegrale digitaliseringsaanpak voor de langere termijn,
+4. de bestuurlijke betrokkenheid bij digitale veiligheid in het bijzonder en digitalisering in het
+
+algemeen,
+5. de evaluatie van de governance van Waternet,
+6. destrekking en duiding van het recent gepubliceerde artikel van onderzoeksplatform Follow
+the Money (9 februari jl) over de digitale veiligheid van Waternet.
+
+Elk van de bovenstaande zes punten wordt in deze brief toegelicht. Het algemeen bestuur van
+waterschap Amstel, Gooi en Vecht (AGV), eveneens bestuurlijk opdrachtgever, zal parallel aan
+deze brief door het dagelijks bestuur van waterschap AGV geïnformeerd worden over de laatste
+stand van zaken op bovengenoemde onderdelen.
+Ad 2. In beeld brengen en mitigeren van risico’s voor digitale veiligheid op de korte termijn
+Prioritering en uitvoering door taskforce
+In december 2020 zijn door het Stichtingsbestuur* van Waternet maatregelen genomen met
+betrekking tot de digitale veiligheid van Waternet. Waternet heeft vervolgens verschillende acties
+(versneld) in gang gezet. Begin december is een interne taskforce ingesteld, bestaande uit diverse
+experts op het gebied van kantoorautomatisering, procesautomatisering, IT-infrastructuur en de
+inhoudelijk betrokkenen van de digitaliseringsopgave, tijdelijk aangestuurd door de directeur
+*In het Stichtingsbestuur heeft naast de wethouder water van de gemeente Amsterdam ook de dijkgraaf van
+het waterschap Amstel, Gooi en Vecht, de heer Van den Top, en de onafhankelijk voorzitter, de heer Den
+Blanken, zitting.
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina 2 van 10
+Dienstverlening van Waternet. Deze taskforce kreeg de opdracht om op basis van alle conclusies
+en aanbevelingen uit recente onderzoeken en adviezen? te bepalen wat met voorrang aangepakt
+zou moeten worden en daar ook uitvoering aan te geven. Op 15 februari jl. ben ik in het
+Stichtingsbestuur door de directie van Waternet over de voortgang geïnformeerd.
+Risico's en weerbaarheid
+Waternet werkt al geruime tijd aan een grote digitaliseringsopgave en had een aantal risico’s met
+betrekking tot de digitale veiligheid ook in beeld. Het ontbrak echter aan een heldere prioritering
+en aan een systematische aanpak van de uitvoering van noodzakelijke maatregelen. De artikelen
+van Follow the Money uit het najaar van 2020 en de aanvullende onderzoeken hebben Waternet
+ervan bewust gemaakt dat een versnelling noodzakelijk is om op het gewenste veiligheidsniveau
+te komen en daarmee de digitale weerbaarheid te vergroten. Meer concreet: het doel is de
+informatie waar Waternet over beschikt (zoals klantgegevens) en processen die Waternet uitvoert
+te beschermen tegen aanvallen van buitenaf, misbruik of verstoringen door bijvoorbeeld
+stroomuitval. En daarnaast ervoor te zorgen dat eventueel verstoorde processen zo snel mogelijk
+hervat worden indien er sprake is van een aanval, misbruik of verstoring.
+Prioritering urgente risico’s eerste kwartaal
+De bovengenoemde taskforce heeft op basis van alle beschikbare informatie een lijst opgesteld
+met alle noodzakelijke (proces)verbeteringen. Aan de hand van drie criteria is bepaald wat de
+meest urgente risico’s zijn die op korte termijn (eerste kwartaal 2021) aangepakt moeten en
+kunnen worden. Deze criteria zijn: de bedrijfscontinuiteit (assets), digitale veiligheid (kans op
+hacken) en datalekken (bescherming datasets).
+Concrete verbeteringen
+Sinds december 2020 is al een aantal ‘quick wins’ in de vorm van geïmplementeerde verbeteringen
+gerealiseerd. Op de kantoorautomatisering zijn diverse verbeteringen aangebracht om de
+omgeving robuuster te maken. De Windows 7 machines zijn vitgefaseerd, de servers hebben geen
+ongelimiteerde toegang tot het internet, de eisen van de wachtwoorden zijn aangescherpt en de
+procedure voor het vitvoeren van de security updates voor Microsoft wordt strikter nageleefd.
+Daarnaast is gestart met het implementeren van een centrale toegangsbeveiliging voor alle IT -
+systemen. Op procesautomatisering wordt het beheer op de digitale systemen van de
+drinkwaterproductie gemonitord op digitale dreigingen.
+Inrichting Security Operations Center
+Een andere belangrijke ontwikkeling is de totstandkoming van een Security Operations Center
+(SOC). Een SOC is een organisatie die bestaat vit mensen, middelen en processen gericht op het
+bewaken van de digitale omgeving en het acteren op meldingen die daaruit voortkomen. De scope
+en taken die een SOC uitvoert, ligt aan de behoefte van de organisatie. Hackers ontwikkelen
+* Onderzoek Accenture, eerder vitgevoerde en recente penetratietesten (pentesten), het advies van de heer
+Gorter (onafhankelijk adviseur van het Stichtingsbestuur voor dit onderwerp), aangevuld met bestaande
+plannen, rapportages en opgaven ten aanzien van privacy en security binnen Waternet.
+Een routebeschrijving vindt v op amsterdam.nl
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina 3 van 10
+steeds nieuwe aanvalsmogelijkheden en penetratiescenario's om netwerken, firewalls,
+webservers, mailservers en applicaties binnen te dringen. Het SOC is een belangrijk instrument om
+afwijkingen in IT-systemen real time te detecteren en daar direct op te reageren en van te leren,
+om bij een volgende aanval weer beter voorbereid te zijn. De voorbereidingen voor een SOC zijn in
+december 2019 gestart. In augustus 2020 is de kwartiermaker SOC van start gegaan.
+Met de berichtgevingen van Follow the Money is de inrichting van het SOC versneld. Het resultaat
+hiervan is dat er op dit moment al meer (toe)zicht is op de digitale veiligheid van de infrastructuur
+van de kantoorautomatisering en procesautomatisering van drinkwater dan bij de publicatie van
+het eerste artikel het geval was. De aansluiting van de andere belangrijke systemen van de
+bedrijfsonderdelen (bijvoorbeeld systemen voor afvalwater, maar ook kantoorautomatisering) op
+het SOC is ingepland. De afhandeling van de bevindingen van het SOC is in de lijn belegd.
+IT Service Management
+Met de start van de digitaliseringsopgave zijn de beheerprocessen decentraal belegd in de teams.
+De teams werken autonoom waardoor het standaard beheer niet integraal wordt uitgevoerd en
+versnippering in het beheer is ontstaan. Er is gestart, conform de recente aanbevelingen, met het
+integraal inrichten van servicemanagementprocessen. IT Service Management (ITSM) betreft het
+procesmatig aansturen van de werkwijze van IT-beheer. Hier worden onder andere de processen
+incident-, lifecycle-, change-, configuratie- en patch management in opgenomen. Dit alles zorgt
+voor een betere control op het beheer van de standaard beheerprocessen.
+Roadmap voor noodzakelijke maatregelen 2021
+Voor het resterende deel van de lijst met noodzakelijke verbeteringen is bepaald welke minder
+Urgent maar wel van belang zijn om aan het eind van dit jaar Waternet-breed de digitale
+weerbaarheid te hebben verhoogd. Deze verbetermaatregelen zijn vertaald in een roadmap voor
+2021.
+Vertrekpunt voor deze roadmap is de Baseline Informatiebeveiliging Overheid 3 (BIO). Het
+Waterschap AGV heeft de plicht om de BIO te gebruiken. Als vitvoeringsorganisatie heeft
+Waternet dezelfde verplichting. Er wordt voor de BIO een score van o tot 5 gehanteerd, wat
+aangeeft in welke mate beheerprocessen ten behoeve van een goede informatiebeveiliging
+aantoonbaar op orde zijn. Het uitvoeren van de noodzakelijke activiteiten draagt bij aan de
+ambitie van Waternet om het volwassenheidsniveau van de BIO te verhogen van 1,54 naar
+gemiddeld 3. Een volwassenheidsniveau van 3 betekent dat beheersmaatregelen zijn
+gedocumenteerd en op gestructureerde en geformaliseerde wijze worden uitgevoerd. Hiermee is
+de opzet, bestaan en effectieve werking van de genomen maatregelen aantoonbaar. Of Waternet
+een hoger volwassenheidsniveau moet nastreven is een beslissing die door de opdrachtgevers van
+3 Vanaf 1 januari 2020 is de Baseline Informatiebeveiliging Overheid (BIO) van kracht. De BIO vervangt de
+bestaande baselines informatieveiligheid voor Gemeenten, Rijk, Waterschappen en Provincies. Hiermee
+ontstaat één gezamenlijk normenkader voor informatiebeveiliging binnen de gehele overheid, gebaseerd op
+de internationaal erkende en actuele 15O-normering. De verplichting die gekoppeld is aan de BIO is dat
+iedere overheidsorganisatie een plan moet opstellen om de weerbaarheid te vergroten.
+Een routebeschrijving vindt v op amsterdam.nl
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina 4 van 10
+
+Waternet moet worden genomen omdat dit een afweging van risico's en kosten betreft (hoe hoger
+
+de BIO score, hoe meer capaciteit en middelen nodig zijn om dat niveau te bereiken).
+
+Uitgaande van een BIO score van gemiddeld 3 is voor het bepalen van alle noodzakelijke acties
+
+gekeken naar:
+
+e Water noodzakelijk is in het kader van de lopende bedrijfsvoering;
+
+e _Watergedaan moet worden omte voldoen aan wet- en regelgeving op het gebied van
+security, privacy en archivering;
+
+e _Watergedaan moet worden om compliant te zijn met betrekking tot overige wet- en
+regelgeving;
+
+e Welke digitaliseringsontwikkelingen daarbovenop noodzakelijk zijn;
+
+e Wat overige wensen zijn.
+
+De noodzakelijke acties worden op dit moment vertaald in benodigd budget, capaciteit en
+
+planning en opgenomen in een integrale roadmap voor 2021. De aanpak van urgente risico’s zoals
+
+in de vorige paragraaf beschreven, is hier ook onderdeel van.
+
+Voortgangsrapportages
+
+Over de voortgang van de digitale transformatie, inclusief de opgaven voor de digitale veiligheid,
+
+wordt sinds 2018 elk half jaar gerapporteerd aan het Stichtingsbestuur. De IT -opgave is echter
+
+breder dan onder de noemer van de digitale transformatie tot nu toe is gevat. En waar tot voor
+
+kort vooral gerapporteerd werd over de voortgang van in gang gezette acties, is en wordt nu
+
+gewerkt aan:
+
+e Realtime inzage in de voortgang van alle acties;
+
+e Inzicht in de impact op de digitale weerbaarheid.
+
+Met name het tweede punt is bestuurlijk relevant omdat hiermee inzage gegeven wordt in wat alle
+
+procesverbeteringen en investeringen concreet opleveren voor de verkleining van risico’s ten
+
+aanzien van de primaire taken van Waternet en zijn klanten. Het risicoprofiel - dat nog bepaald
+
+moet worden (zie onderdeel ad. 3) - zal daarvoor het referentiekader vormen. Met de verbeterde
+
+voortgangsrapportages zullen zowel het Stichtingsbestuur als de besturen van de gemeente
+
+Amsterdam en het waterschap Amstel, Gooi en Vecht (AGV) geïnformeerd worden over de
+
+voortgang.
+
+Extra menskracht
+
+Op een aantal punten was het op korte termijn noodzakelijk om te investeren in extra menskracht:
+
+e Eriseen portfoliomanager ad interim aangewezen om alle noodzakelijke acties versneld en in
+samenhang op te pakken;
+
+e Eriseen nieuwe Operations Security Officer (OSO) aangesteld om erop toe te zien dat de
+juiste maatregelen in het kader van BIO worden uitgevoerd op operationeel niveau;
+
+e Eriseen security architect aangesteld voor het opstellen en uitvoeren van één aanpak voor
+informatiebeveiliging op de IT-infrastructuur.
+
+Een routebeschrijving vindt v op amsterdam.nl
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina 5 van 10
+
+Ad 2. De aanstelling en van een Chief Information Officer (CIO)
+
+Selectieproces CIO
+
+In december 2020 is direct gestart met de werving van een Chief Information Officer (CIO) ad
+
+interim, als toevoeging aan het directieteam van Waternet. In afstemming met het
+
+Stichtingsbestuur en de CIO van Amsterdam is een profiel opgesteld en heeft er werving
+
+plaatsgevonden met ondersteuning van bureau Chasse. In de selectiecommissie had naast de
+
+algemeen en de financieel directeur van Waternet ook de CIO van Amsterdam en de strategisch
+
+adviseur digitalisering vanuit het Stichtingsbestuur zitting. De voorkeurskandidaat is voor
+
+goedkeuring aan de leden van het Stichtingsbestuur voorgelegd, alsmede aan de OR van
+
+Waternet. De heer Ravensbergen, werkzaam bij l-Interim Rijk, is op 22 februari 2021 als CIO ad
+
+interim op detacheringsbasis bij Waternet gestart. Zijn contract loopt tot en met het einde van dit
+
+jaar. Omdat dit een structurele functie betreft, zal tijdig gestart worden met de werving van een
+
+permanente opvolger.
+
+Opdracht CIO
+
+De opdracht aan de nieuwe CIO is op hoofdlijnen de volgende. Hij wordt verantwoordelijk voor:
+
+e _Deintegrale aansturing en totstandkoming van een nieuwe IT-organisatie. Deze nieuwe IT -
+organisatie is een combinatie van digitale dienstverlening, informatietechnologie (IT) en
+Operationele Technologie (OT).
+
+e De visie op digitalisering, het strategisch beleid, het beheer van de gemeenschappelijke
+informatievoorziening van de organisatie en de daarvoor ingezette informatiesystemen.
+
+e _Data-management, IT-portfoliobeheer, IT-investeringsbeheer en risicobeoordeling.
+
+De CIO werkt, in nauwe afstemming met de Chief Information Security Officer (CISO) van
+
+Waternet, de CISO van de gemeente Amsterdam, de strategisch adviseur digitalisering van het
+
+Stichtingsbestuur en het Waterschapshuis (de gezamenlijke IT-organisatie van de waterschappen)
+
+aan een overkoepelende IT-beveiligingsstrategie voor Waternet en de realisatie daarvan.
+
+Ad 3. De integrale digitaliseringsaanpak voor de langere termijn
+
+Digitaliseringsstrategie
+
+In navolging van de huidige aanpak voor digitalisering (2018-2020), is voor de komende periode
+
+(2021) een nieuwe digitaliseringsstrategie voorzien. Dit is onderdeel van het takenpakket van de
+
+nieuwe CIO. Deze strategie stond eerder gepland voor het einde van vorig jaar, maar toen lag
+
+noodgedwongen de prioriteit bij specifiek de digitale veiligheid.
+
+Risicoprofiel
+
+Op dit moment wordt gewerkt aan het formuleren van een risicoprofiel. Dat is het ambitieniveau
+
+tot waar risico's acceptabel worden gevonden, afgewogen tegen de impact op de
+
+bedrijfscontinuiïteit. Het niveau bepaalt het benodigd budget en de noodzakelijke inspanning
+
+(tempo). De bepaling van het risicoprofiel is dus een bestuurlijke beslissing. In overleg met zowel
+
+Een routebeschrijving vindt v op amsterdam.nl
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina 6 van 10
+de gemeente Amsterdam als het waterschap AGV zal hierover in de komende maanden
+besluitvorming plaatsvinden. Deze bestuurlijke kaders vormen het vertrekpunt en referentie voor
+de op te stellen strategie. De strategie zelf en het bijbehorende budget en dekkingsvoorstel zullen
+medio 2021 ter vaststelling worden voorgelegd aan de gemeenteraad van Amsterdam en het
+algemeen bestuur van AGV.
+Aanvullende audit IT-systemen
+Zoals in december reeds is aangekondigd door het Stichtingsbestuur, zal er een aanvullende audit
+op de IT-systemen plaatsvinden. De onderzoeksvraag is door de strategisch adviseur digitalisering
+van het Stichtingsbestuur vitgewerkt. Op dit moment wordt het aantal te onderzoeken netwerken
+en systemen geïnventariseerd, zodat marktpartijen een aanbieding kunnen doen. Begin april 2021
+moet dit leiden tot een keuze voor een partij die de audit zal vitvoeren. De audit zelf zal naar
+verwachting in april en mei 2021 plaatsvinden. Medio juni 2021 volgt vervolgens de rapportage en
+presentatie aan het Stichtingsbestuur.
+Programmatische aanpak
+In de tweede helft van dit jaar zal de CIO een uitvoeringsprogramma opstellen voor de realisatie
+van een integrale IT-organisatie en werkwijze voor de komende jaren op basis van de hier
+bovengenoemde strategie. Onderdeel daarvan is een kalender met audits en de vertaling van de
+uitkomsten van eerdere en nog uit te voeren aanvullende audits op IT-systemen. Ook het in beeld
+brengen en houden van risico's en impact hebben in dit programma een plek. Hierdoor wordt voor
+de besturen ook beter inzichtelijk welke keuzes gemaakt moeten worden.
+Onderzoek ILT
+In haar brief van 17 december 2020 heeft de minister van Infrastructuur en Waterstaat de Tweede
+Kamer geïnformeerd over het onderzoek van de Inspectie voor Leefomgeving en Transport (ILT)
+over de digitale veiligheid bij Waternet. Het onderzoek bestaat uit verschillende stappen:
+vooronderzoek, veldwerk, analyse en rapportage (inclusief hoor en wederhoor). In maart 2021
+wordt dit onderzoeksrapport naar verwachting opgeleverd. Ook deze vitkomsten zijn input voor
+het programma dat wordt opgesteld door de CIO. U wordt uiteraard over de uitkomsten van dit
+onderzoek geïnformeerd.
+Afstemming CISO Amsterdam en mandaat CISO Waternet
+De CISO van de gemeente Amsterdam ziet toe op de stappen die Waternet zet. Daartoe vindt
+tweewekelijks overleg plaats met de CISO's van Waternet en Amsterdam. In dit overleg wordt de
+voortgang van de aanpak van de urgente risico's besproken. Ook zorgt dit overleg voor meer
+afstemming over de lopende bedrijfsvoering.
+In de brief van 3 december schreef het Stichtingsbestuur tot de conclusie te zijn gekomen dat een
+dwingender mandaat van de CISO van Waternet met rapportageverplichting naar de bestuurlijk
+opdrachtgevers noodzakelijk is. De nieuwe CIO zal een voorstel doen hoe dit kan worden
+vormgegeven.
+Een routebeschrijving vindt v op amsterdam.nl
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina 7 van 10
+Vergroten veiligheidsbewustzijn
+Een belangrijk element uit de brief van 3 december is het vergroten van het veiligheidsbewustzijn
+binnen Waternet. Waar dit bewustzijn voor de fysieke beveiliging van onder andere assets goed
+ontwikkeld is, is dat voor digitale veiligheid nog niet op het gewenste niveau. Het veiligheids-
+bewustzijn moet organisatie-breed op een hoger peil gebracht worden. Sinds enkele jaren wordt
+hier ook al meer aandacht aan besteed binnen Waternet. Zo zijn periodieke onlinecursussen over
+digitale veiligheid en veilig thuiswerken voor alle Waternetmedewerkers verplicht. Dat is echter
+niet genoeg. Het gaat ook om de dagelijkse praktische handelingen, zoals het goed afsluiten van
+computers, clean desk policy en zorgvuldig omgaan met devices en wachtwoorden. Monitoring is
+belangrijk. Het meten van vorderingen op dit gebied zal integraal onderdeel vitmaken van
+komende audits met betrekking tot de digitale veiligheid.
+Ten aanzien van houding en gedrag wordt gewerkt aan het eerder escaleren van gesignaleerde
+tekortkomingen, het bespreken van dilemma's, het organiseren en stimuleren van tegenspraak en
+het eerder signaleren dat er sprake is van een bestuurlijke dimensie. Ook wordt nog sterker
+ingezet op het bewustzijn dat aandacht voor digitalisering een integraal onderdeel is van de
+primaire processen. Daarnaast is de CISO aanwezig bij het wekelijks overleg tussen directieleden,
+afdelingshoofden en strategische programmamanagers om een toelichting te kunnen geven op de
+voortgang met betrekking tot digitale veiligheid.
+Budget
+Voor de versnelling in het verhogen van de digitale veiligheid bij Waternet is extra budget nodig.
+Dit betreft een budgetverhoging in het gemeentelijke programma Riool en drinkwater. In de
+Voorjaarsnota 2021 zal hiervoor een globale raming worden opgenomen, die voor de begroting
+2022 verder zal worden uitgewerkt.
+Ad 4. Bestuurlijke betrokkenheid digitale veiligheid en digitalisering
+Digitalisering als verantwoordelijkheid afzonderlijke besturen
+Het besef dat digitalisering tot de primaire taken van Waternet behoort en geen onderdeel van de
+bedrijfsvoering (meer) is, is in de afgelopen maanden zowel ambtelijk als bestuurlijk toegeno men.
+De consequentie daarvan is dat besluitvorming daarover niet in het Stichtingsbestuur maar inde
+afzonderlijke besturen van de beide opdrachtgevers dient plaats te vinden.
+Verschillen in betrokkenheid AGV en Amsterdam
+Beide opdrachtgevers hechten veel belang aan het oplossen van de risico's van digitale veiligheid,
+de totstandkoming van een integrale IT-organisatie en een programmatische aanpak van de
+digitaliseringsopgave. Tegelijkertijd is de betrokkenheid op niveau van de gemeenteraad van
+Amsterdam en het algemeen bestuur (AB) van waterschap AGV verschillend ingericht. Dit heeft
+voor een deel te maken met het feit dat AGV de vitvoering van al zijn taken heeft belegd bij
+Waternet, terwijl dat voor de gemeente Amsterdam niet het geval is. Alleen de (meeste)
+watertaken worden door Waternet uitgevoerd, alle andere taken liggen bij de verschillende
+onderdelen van de gemeente Amsterdam.
+Een routebeschrijving vindt v op amsterdam.nl
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina 8 van 10
+Werkgroep AB AGV
+Het algemeen bestuur van AGV heeft in december een werkgroep ingesteld die de bestuurlijke
+aspecten van digitalisering inventariseert vanuit de vraag: “hoe kan het AB zijn taakstellende en
+controlerende taken op het gebied van digitalisering en cybersecurity goed invullen?”. Op 31
+maart is een commissievergadering gepland waarin onder meer de bevindingen van de werkgroep
+worden gedeeld en besproken met het AB.
+Periodieke bestuurlijke terugkoppeling en prioriteitstelling
+Op bestuurlijk niveau wordt periodiek een project portfolio overleg gepland. Aan dit overleg
+nemen de nieuwe CIO van Waternet, de CISO's van Waternet en Amsterdam, de
+portefeuillehouder digitalisering van waterschap AGV, de strategisch adviseur van het
+Stichtingsbestuur en binnenkort ook ondergetekende deel. In dit maandelijkse overleg geeft
+Waternet updates over de lopende (reparatie) acties. Ook wordt in dit overleg de resource
+allocatie (mensen en middelen), financiering en prioriteitstelling (risico en impact gebaseerd)
+bepaald van lopende en nieuwe projecten.
+Ad 5. Evaluatie van de governance van Waternet
+Aanleiding herijking bestaande besturing
+Naast de vitdagingen op het gebied van cybersecurity, is ook in de eerdergenoemde brief aan de
+gemeenteraad aangegeven dat het noodzakelijk is dat de gemeente Amsterdam en het
+waterschap AGV de samenwerking via Stichting Waternet evalveren en herijken. Deze evaluatie
+staat in het perspectief van nieuwe maatschappelijke opgaven die raken aan de watertaken van de
+beide opdrachtgevers, bredere ontwikkelingen in het openbaar bestuur en aan fiscaal-juridische
+aspecten. Er wordt gekeken wat de betekenis daarvan kan zijn voor de vorm en inrichting van die
+samenwerking.
+Op bestuurlijk niveau ontmoeten Amsterdam en AGV elkaar nu in het Stichtingsbestuur, waar
+keuzes en toezicht op de bedrijfsvoering plaatsvindt. De vraag is of dit ook in de toekomst de
+wenselijke vorm van samenwerking is. Daarnaast groeit de behoefte aan kaders vanuit de
+bestuurlijk opdrachtgevers op onderwerpen die tot nu toe werden geduid als uitvoeringszaken,
+zoals digitalisering, personeelsbeleid en inkoopbeleid. Dat geldt zeker ook voor de aanpak van
+maatschappelijke opgaven zoals energietransitie, circulaire economie, klimaatadaptatie,
+bodemdaling en droogte. Het cybersecurity dossier heeft de urgentie van deze evaluatie en
+herijking nog eens versterkt.
+Opdracht en ontwikkeling procesontwerp
+Op dit moment is prof. dr. Marcel Boogers (hoogleraar Innovatie en regionale overheden aan de
+Universiteit Twente, tevens als adviseur verbonden aan bureau Necker van Naem) gestart met een
+verkenning hoe het proces van herijking van de governance van Waternet* er vit zou kunnen zien.
+4 Ook wel het Waternet 3.0 traject genoemd.
+Een routebeschrijving vindt v op amsterdam.nl
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina g van 10
+
+Het totale proces bevat ook de evaluatie van de drie aspecten die genoemd zijn in de brief van het
+
+Stichtingsbestuur van 3 december 2020:
+
+1. de aansturings- en verantwoordingsrelaties tussen de gemeente Amsterdam en het
+waterschap AGV enerzijds en Waternet anderzijds;
+
+2. de organisatie- en directiestructuur van Waternet;
+
+3. de organisatiecultuur van Waternet.
+
+Het streven is dat dit herijkingsproces een gezamenlijk proces van de gemeente Amsterdam en
+
+het waterschap AGV wordt. Hiervoor heeft de heer Boogers inmiddels verschillende gesprekken
+
+gevoerd met betrokkenen vanuit de gemeente Amsterdam en waterschap AGV. Op basis van deze
+
+gesprekken is een advies voor de evalvatieopdracht en de procesarchitectuur in de maak dat
+
+besproken zal worden met de bestuurlijke opdrachtgevers. Over de scope, aanpak en bestuurlijke
+
+en ambtelijke aansturing van dit traject wordt u separaat geïnformeerd. De heer Mager namens
+
+het waterschap AGV (lid dagelijks bestuur) en ondergetekende namens de gemeente Amsterdam
+
+zijn gezamenlijk bestuurlijk trekker van dit proces. Hiervoor zal in de komende periode regulier
+
+bestuurlijk overleg plaatsvinden.
+
+Rekenkameronderzoek rioleringstaken
+
+De Rekenkamer van de gemeente Amsterdam heeft onderzoek gedaan naar de uitvoering en de
+
+governance van de gemeentelijke rioleringstaken. Riolering heeft een belangrijke rol in de
+
+samenleving. Het aanleggen, beheren en onderhouden van het rioolstelsel betreft een
+
+omvangrijke en vitdagende taak voor de gemeente.
+
+In dit rekenkameronderzoek staan twee vragen centraal: 1) in hoeverre worden de rioleringstaken
+
+adequaat vitgevoerd. En 2) in hoeverre is de wijze waarop de gemeente de rioleringstaken heeft
+
+ingericht en aanstuurt adequaat. Dit onderzoek loopt nog en bevindt zich in de fase van feitelijk
+
+wederhoor. Wanneer het onderzoek is afgerond zullen de conclusies en aanbevelingen
+
+meegenomen worden in de herijking en evaluatie van de governance van Waternet. Datzelfde
+
+geldt overigens ook voor de voor de governance relevante uitkomsten van het onderzoek van de
+
+ILT naar de digitale veiligheid van Waternet in relatie tot de drinkwatertaken.
+
+6. Strekking recent artikel Follow the Money
+
+Strekking derde artikel
+
+Op 9 februari is een derde artikel van het onderzoeksplatform Follow the Money (FTM)
+
+verschenen. Het artikel schetst een beeld van wat er sinds het verschijnen van het eerste artikel in
+
+september 2020 aan acties en ingrepen heeft plaatsgevonden en welke kanttekeningen FTM
+
+daarbij plaatst. In het artikel worden vooral vraagtekens gezet bij de onafhankelijkheid en het niet
+
+openbaar zijn van het vertrouwelijke onderzoeksrapport van Accenture. Dit rapport is
+
+vertrouwelijk omdat het bedrijfsgevoelige informatie bevat. Tevens wordt de positie van de
+
+onafhankelijk strategisch adviseur digitalisering van het Stichtingsbestuur in twijfel getrokken. De
+
+keuze voor de adviseur is in het Stichtingsbestuur voorgelegd en geaccordeerd.
+
+Een routebeschrijving vindt v op amsterdam.nl
+Gemeente Amsterdam, raadsinformatiebrief Datum 10 maart 2021
+Pagina 10 van 10
+
+Kamervragen
+Door de Tweede Kamerfractie van soPLUS zijn naar aanleiding van de publicatie van het derde
+FTM-artikel op zo februari schriftelijke vragen gesteld aan de minister van Infrastructuur en
+Waterstaat. Deze vragen hebben betrekking op de beoordeling van de onafhankelijkheid van het
+Accenture-onderzoek en de beoordeling van het onderzoek zelf, de bedrijfsvoering van Waternet
+en de status van het ILT-onderzoek.
+Vertrouwelijkheid geschonden
+In het Follow the Money artikel staat een aantal beweringen over onder andere de
+vertrouwelijkheid van het onderzoek door Accenture. Daarbij zijn ook screenshots aan het artikel
+toegevoegd die afkomstig zijn vit het geheime rapport van Accenture. Dat betekent dat de
+geheimhouding is geschonden, wat een misdrijf is. Het bestuur van AGV heeft inmiddels besloten
+over te gaan tot het doen van aangifte. Waternet zal dit ook doen.
+Geen link met migratieproces drinkwaterfacturatie
+Waternet heeft sinds november 2020 een nieuw facturatiesysteem voor haar drinkwaterklanten.
+Een overgang van een dergelijk systeem is een complex proces. De migratie heeft als gevolg
+gehad dat er enkele processen tijdelijk hinder hebben ondervonden. Zo ontvingen
+Waternetklanten met vertraging hun factuur, termijnnota’s en eindafrekeningen, waardoor
+sommige klanten twee facturen vlak op elkaar ontvingen. Geen enkele klant heeft echter een
+dubbele factuur ontvangen en zal ook niet teveel betalen. Er is geen link tussen het in gebruik
+nemen van het nieuwe facturatiesysteem en cybersecurity.
+Vervolg
+Zoals hierboven geschetst, is er sinds december vorig jaar veel in gang gezet en zijn er ook al
+verbeteringen gerealiseerd. Conform de wensen van het Stichtingsbestuur is er een nieuwe CIO ad
+interim aangesteld. Er is en wordt voortgang geboekt op de meest urgente risico's en er wordt
+systematisch gewerkt aan een integrale aanpak van de overige risico's en er een helder plan is van
+wat er in 2021 moet gebeuren. Maar de opgave is nog altijd groot.
+Ik zal v regelmatig en actief informeren over de voortgang.
+Met vriendelijke groet,
+Namens het college van burgemeester en wethouders van de gemeente Amsterdam,
+
+/ Í hs
+
+|
+
+M \
+Egbert J. de Vries
+Wethouder Verkeer en Vervoer, Water en Luchtkwaliteit
+Een routebeschrijving vindt v op amsterdam.nl
+
