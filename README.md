@@ -12,9 +12,6 @@ The research consists of four main parts:
 3. Fine-tuning experiment. We compare the results of the in-context learning to that of the LLMs after they have been fine-tuned on the task.
 4. Baselines experiment. To evaluate the worthwhile of the LLMs, we compare them to simple baselines, such as Naïve Bayes and Linear SVM.
 
-
-
-
 <!-- ## ## Overleaf Link
 [Thesis Design](https://www.overleaf.com/2549441224szvvffnxqsdk#eda3e6)
 
@@ -58,34 +55,31 @@ git clone https://github.com/AmsterdamInternships/document-classification-using-
 
 2) Install all dependencies:
     
-Right now, im having trouble with setting up the requirements.txt files. I will get to that later, for now, the most important libraries to install to get the fine-tuning to work are:
+Here we have an overview of the requirements. 
 
 ```bash
 pip install torch
 pip install datasets==2.19.1
 pip install transformers==4.40.2
 pip install trl
-pip install accelerate 
-pip install sentencepiece
+pip install accelerate
+pip install sentencepiec
 pip install jupyter
 pip install protobuf 
 pip install bitsandbytes
 pip install bnb
-pip install wandb==0.13.3 --upgrade
+pip install wandb==0.13.3
 pip install tensorboardX
 ```
 
-We have included a [requirements.txt](requirements.txt) file where all libraries and their versions are available
-
+Additionally, we have included a [requirements.txt](requirements.txt) file where all libraries and their versions are available
 
 The code has been tested with Python 3.9 on Windows. 
 
-<!-- ## Usage
-What do I need to put here? -->
 ## How it works
 All code can be run in the notebooks. They have been numbered in the right order of usage.
 * [`0FileOverview`](./notebooks/0FileOverview.ipynb) -> An overview of all the data files and their columns explained. Does not include code. 
-* [`1load_txt`](./notebooks/1load_txt.ipynb) -> Loads the text from the OCR files.
+* [`1load_txt`](./notebooks/1load_txt.ipynb) -> Loads the text from the OCR files. Note, that there is separate notebook to load the files from Blobfuse, because of the complicated folder structure. 
 * [`2clean_data`](./notebooks/2clean_data.ipynb) -> Removes messy documents and duplicates. Splits data into subsets.
 * [`3TokenizeText`](./notebooks/3TokenizeText.ipynb) -> Tokenize the documents using either the Mistral or the Llama tokenizer. 
 * [`4FinetuningDataFormatting`](./notebooks/4FinetuningDataFormatting.ipynb) -> Format the data frame with documents into a dataset that is pushed to HuggingFace. 
@@ -96,35 +90,12 @@ All code can be run in the notebooks. They have been numbered in the right order
 
 
 Stand-alone notebooks:
-- EDA/EDA_clean_for_submission
+- [`EDA`](./notebooks/EDA.ipynb)
 - [`load_txt_azure`](./notebooks/load_txt_azure.ipynb) -> Azure version of 1loadtxt.ipynb. The folders on Blobfuse are messily structured.
 - [`RepairMistralPredictions`](./notebooks/RepairMistralPredictions.ipynb) -> Repair mistakes made by mistral. Exceptional to Mistral. 
 
-## TODO:
-- clean up finetuning overview_model file
-- fix requirements file
-- Make EDA runnable
-- local paths: Create outputfile with 10 docs per class (demo data). Check hardcoding for split function. Check if all code is runnable on this demo function. Only different thing in code should be replacement of configure file.
-
-Can be divided in subsections:
-
-### input
-### algorithm
-### output
-
-OR
-
-### training
-### prediction
-### evaluation -->
-
-## Contributing
-
-
 
 Feel free to help out! [Open an issue](https://github.com/AmsterdamInternships/document-classification-using-large-language-models/issues), submit a [PR](https://github.com/AmsterdamInternships/document-classification-using-large-language-models/pulls)  or [contact us](https://amsterdamintelligence.com/contact/).
-
-
 
 
 ## Acknowledgements
