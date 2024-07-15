@@ -15,9 +15,7 @@ This file contains the images to be included in the rebuttal.
 ![image](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/51d4070f-a822-4deb-aa04-60f92703d952)
 ![image](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/f7ffe732-5e7a-4c82-984f-91d1777d3e87)
 
+Figure 5. Confusion Matrix of Fine-tuned Mistral (3 epochs)
+![FT_mistral_3epochs_nt](https://github.com/user-attachments/assets/23014f13-6a67-47d6-bea1-7c386a18bde7)
 
-![FT_mistral_3epochs](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/1a06c96c-34ec-4b6e-b1d9-791c3e8df0a3)
 
-![LINEARSVM_200tokens](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/464e0224-ca41-424f-84b3-3ae09c312af2)
-
-![LINEARSVM_FULLTEXT](https://github.com/Amsterdam-Internships/document-classification-using-large-language-models/assets/70972237/2f794c9d-8fec-49f2-8048-0835d9d5b12b)
